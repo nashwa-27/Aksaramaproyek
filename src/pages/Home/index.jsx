@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import "./index.css";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+import Aksarama from "../../assets/Aksarama.png";
+import bgkosong from "../../assets/bgkosong.png";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
-// import Aksarama from "../../assets/Aksarama.png";
+
+import foto1 from "../../assets/foto1.png";
+import foto2 from "../../assets/foto2.png";
+import foto3 from "../../assets/foto3.png";
+
+import funfact1 from "../../assets/funfact1.png";
+import funfact2 from "../../assets/funfact2.png";
+import funfact3 from "../../assets/funfact3.png";
 
 import movie1 from "../../assets/movie1.png";
 import movie2 from "../../assets/movie2.png";
@@ -13,30 +22,22 @@ import movie4 from "../../assets/movie4.png";
 import movie5 from "../../assets/movie5.png";
 import movie6 from "../../assets/movie6.png";
 
+import profile from "../../assets/profile.png";
+
 function Home() {
-
-  const navigate = useNavigate();
-
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
-
     if (message.trim() === "") {
-
       alert("Pesan masih kosong!");
-
       return;
-
     }
 
     alert("Feedback berhasil dikirim ✨");
-
     setMessage("");
-
   };
 
   const movies = [
-
     {
       title: "Gotong Royong",
       image: movie1,
@@ -72,49 +73,58 @@ function Home() {
       image: movie6,
       link: "https://youtu.be/kUMRJ0dz_J4",
     },
-
   ];
 
   return (
-
-    <div className="home-container">
+    <div
+      className="home-container"
+      style={{
+        backgroundImage: `url(${bgkosong})`,
+      }}
+    >
 
       {/* NAVBAR */}
       <nav className="navbar">
 
-        <h1 className="logo">
-          AKSARAMA
-        </h1>
+        <img
+          src={Aksarama}
+          alt="Aksarama"
+          className="logo"
+        />
 
         <div className="nav-links">
 
-          <a href="#home">
-            Home
-          </a>
+          <a href="#home">Home</a>
 
-          <a href="#about">
-            About
-          </a>
-
-          <button
-            className="nav-btn"
-
-            onClick={() =>
-              navigate("/information")
-            }
-          >
-            Information
-          </button>
+          <Link to="/about">
+            About Us
+          </Link>
 
           <a href="#movie">
             Movie
           </a>
+
+          <Link to="/information">
+            Information
+          </Link>
 
           <a href="#feedback">
             Feedback
           </a>
 
         </div>
+
+        <Link
+          to="/login"
+          className="login-btn"
+        >
+          Login
+
+          <div className="login-icon">
+            →
+          </div>
+
+        </Link>
 
       </nav>
 
@@ -125,8 +135,16 @@ function Home() {
       >
 
         <h1>
-          Rahayu Kalbu 👋🏻
+          Rahayu Kalbu
         </h1>
+
+        <div className="hero-decor">
+
+          <span>✦</span>
+          <span>👋🏻</span>
+          <span>⌒</span>
+
+        </div>
 
         <img
           src={MaskotAksarama}
@@ -137,32 +155,49 @@ function Home() {
         <div className="hero-box">
 
           <div>
-            Selamat!!!!! <br />
+            <h3>Selamat !!!!!</h3>
 
-            kamu terpilih untuk membangun kembali
-            pemahaman bangsa tentang jati diri kita.
+            <p>
+              kamu terpilih untuk membangun
+              kembali pemahaman bangsa
+              tentang jati diri kita.
+            </p>
           </div>
 
           <div>
-            Selesaikan 3 tahapan di setiap level
-            untuk membuka kuis kenaikan tingkat
+            <p>
+              Selesaikan 3 tahapan di
+              setiap level untuk membuka
+              kuis kenaikan tingkat
+            </p>
           </div>
 
         </div>
 
+        <p className="hero-small">
+          Lets started together !
+        </p>
+
+        <button className="start-btn">
+          Get Started →
+        </button>
+
       </section>
 
-      {/* FLOATING */}
-      <section className="floating-section">
+      {/* FOTO */}
+      <section className="foto-section">
 
-        <div className="top-card"></div>
-        <div className="top-card"></div>
-        <div className="top-card"></div>
+        <img src={foto1} alt="" />
+        <img src={foto2} alt="" />
+        <img src={foto3} alt="" />
 
       </section>
 
-      {/* ABOUT */}
-      <section id="about">
+      {/* WHY */}
+      <section
+        className="why-section"
+        id="about"
+      >
 
         <h2>
           Why choose Aksarama?
@@ -171,41 +206,64 @@ function Home() {
         <div className="why-grid">
 
           <div>
-
             <h3>Easy to Use</h3>
 
             <p>
-              Ubah materi rumit jadi visual simpel.
+              Ubah materi rumit jadi visual
+              simpel yang instan.
             </p>
-
           </div>
 
           <div>
-
             <h3>Safe & Eternal</h3>
 
             <p>
-              Simpan warisan leluhur secara digital.
+              Simpan warisan leluhur
+              secara digital agar abadi.
             </p>
-
           </div>
 
           <div>
-
             <h3>Versatile Hub</h3>
 
             <p>
-              Wadah kreatif untuk belajar budaya.
+              Wadah kreatif untuk belajar
+              budaya hingga bangun brand.
             </p>
-
           </div>
 
         </div>
 
       </section>
 
+      {/* FUNFACT */}
+      <section className="funfact-section">
+
+        <h2>Our FunFact</h2>
+
+        <h3>— Tahukah Kamu ?</h3>
+
+        <p className="funfact-text">
+          Di balik kekayaan budaya Indonesia,
+          terdapat banyak fakta unik dan
+          menarik yang sering terlewatkan.
+        </p>
+
+        <div className="funfact-grid">
+
+          <img src={funfact1} alt="" />
+          <img src={funfact2} alt="" />
+          <img src={funfact3} alt="" />
+
+        </div>
+
+      </section>
+
       {/* MOVIE */}
-      <section id="movie">
+      <section
+        className="movie-section"
+        id="movie"
+      >
 
         <h2>Movie</h2>
 
@@ -216,20 +274,20 @@ function Home() {
             <div
               className="movie-card"
               key={index}
-
               onClick={() =>
-                window.open(movie.link, "_blank")
+                window.open(
+                  movie.link,
+                  "_blank"
+                )
               }
             >
 
               <img
                 src={movie.image}
-                alt={movie.title}
+                alt=""
               />
 
-              <h3>
-                {movie.title}
-              </h3>
+              <h3>{movie.title}</h3>
 
             </div>
 
@@ -240,88 +298,127 @@ function Home() {
       </section>
 
       {/* FEEDBACK */}
-      <section id="feedback">
+      <section
+        className="feedback-section"
+        id="feedback"
+      >
+
+        <h4>Hubungi Kami</h4>
 
         <h2>Feedback</h2>
 
-        <textarea
-          placeholder="Ketik pesan..."
+        <div className="feedback-box">
 
-          value={message}
+          <textarea
+            placeholder="Ketik pesan..."
 
-          onChange={(e) =>
-            setMessage(e.target.value)
-          }
+            value={message}
 
-          onKeyDown={(e) => {
-
-            if (e.key === "Enter") {
-
-              e.preventDefault();
-
-              handleSend();
-
+            onChange={(e) =>
+              setMessage(e.target.value)
             }
 
-          }}
-        />
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                handleSend();
+              }
+            }}
+          />
 
-        <button onClick={handleSend}>
-          Send !
-        </button>
+          <button onClick={handleSend}>
+            Send !
+          </button>
+
+        </div>
 
       </section>
 
       {/* FOOTER */}
       <footer>
 
-        <div className="footer-logo">
+        <div className="footer-container">
 
-          <img
-            src={MaskotAksarama}
-            alt="Logo"
-          />
+          {/* kiri */}
+          <div>
 
-          <h1>AKSARAMA</h1>
+            <h3>Navigation</h3>
 
-        </div>
+            <a href="#home">Home</a>
 
-        <div className="socials">
+            <Link to="/about">
+              About Us
+            </Link>
 
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Instagram
-          </a>
+            <Link to="/information">
+              Information
+            </Link>
 
-          <a
-            href="https://tiktok.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            TikTok
-          </a>
+            <a href="#movie">Movie</a>
 
-          <a href="mailto:kelompok6@gmail.com">
-            Email
-          </a>
+            <a href="#feedback">
+              Feedback
+            </a>
 
-          <a
-            href="https://wa.me/62895423012443"
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
-          </a>
+          </div>
+
+          {/* tengah */}
+          <div className="footer-center">
+
+            <img
+              src={profile}
+              alt=""
+            />
+
+            <h1>AKSARAMA</h1>
+
+            <a
+              href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
+              target="_blank"
+              rel="noreferrer"
+              className="ig-btn"
+            >
+              Instagram
+            </a>
+
+            <div className="footer-links">
+
+              <Link to="/about">
+                About
+              </Link>
+
+              <Link to="/contact">
+                Contact Us
+              </Link>
+
+              <a href="#feedback">
+                Feedback
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* kanan */}
+          <div>
+
+            <h3>Get in Touch</h3>
+
+            <p>
+              +62 895-4230-12443
+            </p>
+
+            <p>
+              kelompok6@gmail.com
+            </p>
+
+          </div>
 
         </div>
 
       </footer>
 
     </div>
-
   );
 }
 
