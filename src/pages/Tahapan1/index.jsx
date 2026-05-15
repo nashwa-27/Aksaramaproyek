@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-import bgkosong from "../../assets/bgkosong.png";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 
 function InformationMateri() {
@@ -18,9 +17,6 @@ function InformationMateri() {
     <div
       className="materi-page"
 
-      style={{
-        backgroundImage: `url(${bgkosong})`,
-      }}
     >
 
       {/* ================= NAVBAR ================= */}
@@ -141,7 +137,7 @@ function InformationMateri() {
 
         <button
           className="next-btn"
-          onClick={() => navigate("/Tahapan2")}
+          onClick={() => navigate("/Information")}
         >
           Next
         </button>
