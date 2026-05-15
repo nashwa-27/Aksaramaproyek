@@ -1,40 +1,99 @@
 import React from "react";
 import "./index.css";
+
 import { useNavigate } from "react-router-dom";
 
+import profile from "../../assets/profile.png";
+import bgLogin from "../../assets/bgLogin.webp";
+
 function SignUp() {
+
   const navigate = useNavigate();
 
-  const handleSignUp = () => {
-    navigate('/LogIn');
-  }
-
   return (
-    <div className="container">
+
+    <div
+      className="container"
+
+      style={{
+        backgroundImage: `url(${bgLogin})`,
+      }}
+    >
+
       <div className="card">
-        <div className="circle"></div>
+
+        {/* PROFILE */}
+
+        <img
+          src={profile}
+          alt=""
+          className="profile-img"
+        />
 
         <h2>Sign Up</h2>
 
+        {/* NAME */}
+
         <div className="row">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+
+          <input
+            type="text"
+            placeholder="First Name"
+          />
+
+          <input
+            type="text"
+            placeholder="Last Name"
+          />
+
         </div>
 
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        {/* EMAIL */}
 
-        <button className="btn" onClick={() => navigate("/LogIn")}>
+        <input
+          type="email"
+          placeholder="Email"
+        />
+
+        {/* PASSWORD */}
+
+        <input
+          type="password"
+          placeholder="Password"
+        />
+
+        {/* BUTTON */}
+
+        <button
+          className="btn"
+
+          onClick={() => navigate("/LogIn")}
+        >
+
           Sign Up
+
         </button>
 
-        <p>
+        {/* LOGIN */}
+
+        <p className="login-text">
+
           Already Have an Account?{" "}
-          <span onClick={() => navigate("/LogIn")}>Log in</span>
-          </p>
+
+          <span
+            onClick={() => navigate("/LogIn")}
+          >
+
+            Log in
+
+          </span>
+
+        </p>
+
       </div>
+
     </div>
-    
+
   );
 }
 

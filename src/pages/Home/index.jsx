@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
 
 import { Link } from "react-router-dom";
 
-import Aksarama from "../../assets/Aksarama.png";
-import bgkosong from "../../assets/bgkosong.png";
+// import Aksarama from "../../assets/Aksarama.webp";
+// import bgkosong from "../../assets/bgkosong.png";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 
-import foto1 from "../../assets/foto1.png";
-import foto2 from "../../assets/foto2.png";
-import foto3 from "../../assets/foto3.png";
+import Foto1 from "../../assets/Foto1.webp";
+import Foto2 from "../../assets/Foto2.webp";
+import Foto3 from "../../assets/Foto3.webp";
 
 import funfact1 from "../../assets/funfact1.png";
 import funfact2 from "../../assets/funfact2.png";
@@ -23,139 +23,30 @@ import movie5 from "../../assets/movie5.png";
 import movie6 from "../../assets/movie6.png";
 
 import profile from "../../assets/profile.png";
+import instagram from "../../assets/instagram.png";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Home() {
-  const [message, setMessage] = useState("");
-
-  const handleSend = () => {
-    if (message.trim() === "") {
-      alert("Pesan masih kosong!");
-      return;
-    }
-
-    alert("Feedback berhasil dikirim ✨");
-    setMessage("");
-  };
-
-  const movies = [
-    {
-      title: "Gotong Royong",
-      image: movie1,
-      link: "https://youtu.be/Gtnjons7tkU",
-    },
-
-    {
-      title: "Sebaran Flora dan Fauna",
-      image: movie2,
-      link: "https://youtu.be/1G8cAqwRYR8",
-    },
-
-    {
-      title: "Keberagaman Indonesia",
-      image: movie3,
-      link: "https://youtu.be/Y9w9vxCJLkU",
-    },
-
-    {
-      title: "Aneka Ragam Hias",
-      image: movie4,
-      link: "https://youtu.be/eq_hS1Ung0U",
-    },
-
-    {
-      title: "Teknik Pembuatan Patung",
-      image: movie5,
-      link: "https://youtu.be/o-MdksQwhso",
-    },
-
-    {
-      title: "Norma Dalam Kehidupan",
-      image: movie6,
-      link: "https://youtu.be/kUMRJ0dz_J4",
-    },
-  ];
-
   return (
     <div
-      className="home-container"
-      style={{
-        backgroundImage: `url(${bgkosong})`,
-      }}
+      className="home"
+      // style={{
+      //   backgroundImage: `url(${bgkosong})`,
+      // }}
     >
+      {/* ================= NAVBAR ================= */}
 
-      {/* NAVBAR */}
-      <nav className="navbar">
+      <Navbar />
 
-        <img
-          src={Aksarama}
-          alt="Aksarama"
-          className="logo"
-        />
+      {/* ================= HERO ================= */}
 
-        <div className="nav-links">
-
-          <a href="#home">Home</a>
-
-          <Link to="/about">
-            About Us
-          </Link>
-
-          <a href="#movie">
-            Movie
-          </a>
-
-          <Link to="/information">
-            Information
-          </Link>
-
-          <a href="#feedback">
-            Feedback
-          </a>
-
-        </div>
-
-        <Link
-          to="/login"
-          className="login-btn"
-        >
-          Login
-
-          <div className="login-icon">
-            →
-          </div>
-
-        </Link>
-
-      </nav>
-
-      {/* HERO */}
-      <section
-        className="hero"
-        id="home"
-      >
-
-        <h1>
-          Rahayu Kalbu
-        </h1>
-
-        <div className="hero-decor">
-
-          <span>✦</span>
-          <span>👋🏻</span>
-          <span>⌒</span>
-
-        </div>
-
-        <img
-          src={MaskotAksarama}
-          alt="Maskot"
-          className="maskot"
-        />
+      <section className="hero" id="home">
+        <h1>Rahayu Kalbu</h1>
 
         <div className="hero-box">
-
-          <div>
-            <h3>Selamat !!!!!</h3>
+          <div className="hero-text">
+            <h2>Selamat !!!!!</h2>
 
             <p>
               kamu terpilih untuk membangun
@@ -164,260 +55,168 @@ function Home() {
             </p>
           </div>
 
-          <div>
+          <img
+            src={MaskotAksarama}
+            alt="maskot"
+            className="maskot"
+          />
+
+          <div className="hero-text right">
             <p>
               Selesaikan 3 tahapan di
               setiap level untuk membuka
               kuis kenaikan tingkat
             </p>
           </div>
-
         </div>
 
-        <p className="hero-small">
-          Lets started together !
-        </p>
-
         <button className="start-btn">
-          Get Started →
+          Get Started
         </button>
-
       </section>
 
-      {/* FOTO */}
-      <section className="foto-section">
+      {/* ================= FOTO ================= */}
 
-        <img src={foto1} alt="" />
-        <img src={foto2} alt="" />
-        <img src={foto3} alt="" />
-
+      <section className="gallery">
+        <img src={Foto1} alt="" />
+        <img src={Foto2} alt="" />
+        <img src={Foto3} alt="" />
       </section>
 
-      {/* WHY */}
-      <section
-        className="why-section"
-        id="about"
-      >
+      {/* ================= WHY ================= */}
 
-        <h2>
-          Why choose Aksarama?
-        </h2>
+      <section className="why-section">
+        <h2>Why Choose Aksarama?</h2>
 
-        <div className="why-grid">
+        <div className="title-line"></div>
 
-          <div>
+        <div className="why-container">
+          <div className="why-card">
             <h3>Easy to Use</h3>
 
             <p>
               Ubah materi rumit jadi visual
-              simpel yang instan.
+              simpel yang mudah dipahami.
             </p>
           </div>
 
-          <div>
+          <div className="why-card">
             <h3>Safe & Eternal</h3>
 
             <p>
-              Simpan warisan leluhur
-              secara digital agar abadi.
+              Simpan budaya secara digital
+              agar tetap lestari.
             </p>
           </div>
 
-          <div>
+          <div className="why-card">
             <h3>Versatile Hub</h3>
 
             <p>
-              Wadah kreatif untuk belajar
-              budaya hingga bangun brand.
+              Belajar budaya jadi lebih
+              modern dan menyenangkan.
             </p>
           </div>
-
         </div>
-
       </section>
 
-      {/* FUNFACT */}
-      <section className="funfact-section">
+      {/* ================= FUNFACT ================= */}
 
+      <section className="funfact-section">
         <h2>Our FunFact</h2>
 
-        <h3>— Tahukah Kamu ?</h3>
+        <div className="title-line"></div>
 
         <p className="funfact-text">
           Di balik kekayaan budaya Indonesia,
           terdapat banyak fakta unik dan
-          menarik yang sering terlewatkan.
+          menarik.
         </p>
 
-        <div className="funfact-grid">
-
+        <div className="funfact-container">
           <img src={funfact1} alt="" />
           <img src={funfact2} alt="" />
           <img src={funfact3} alt="" />
-
         </div>
-
       </section>
 
-      {/* MOVIE */}
+      {/* ================= MOVIE ================= */}
+
       <section
         className="movie-section"
         id="movie"
       >
-
         <h2>Movie</h2>
 
-        <div className="movie-grid">
+        <div className="title-line"></div>
 
-          {movies.map((movie, index) => (
+        <div className="movie-container">
+          <div className="movie-card">
+            <a href ="https://www.youtube.com/watch?si=3WxeOClzuD0uu0dQ&v=Gtnjons7tkU&feature=youtu.be" target="_blank" rel="noreferrer">
+              <img src={movie1} alt="" />
+              <p>PKN - Gotong Royong | Aplikasi untuk belajar materi gotong rotong</p>
+            </a>
+          </div>
 
-            <div
-              className="movie-card"
-              key={index}
-              onClick={() =>
-                window.open(
-                  movie.link,
-                  "_blank"
-                )
-              }
-            >
+          <div className="movie-card">
+            <a href = "https://www.youtube.com/watch?si=4KfqR4onY3EorMo4&v=1G8cAqwRYR8&feature=youtu.be" target="_blank" rel="noreferrer">
+            <img src={movie2} alt="" />
+            <p>Sebaram Flora dan Fauna di Indonesia 
+            Mengenai Aneka Ragam Hias dari Berbagai Daerah di Indonesia</p>
+            </a>
+          </div>
 
-              <img
-                src={movie.image}
-                alt=""
-              />
 
-              <h3>{movie.title}</h3>
+          <div className="movie-card">
+            <a href = "https://youtu.be/Y9w9vxCJLkU?si=k2vVfwE5sO4attT1" target="_blank" rel="noreferrer">
+              <img src={movie3} alt="" />
+              <p>Keberagaman Suku dan Budaya di Indonesia | PKN | SayaBisa</p>
+            </a>
+          </div>
 
-            </div>
+          <div className="movie-card">
+            <a href = "https://www.youtube.com/watch?si=iF8IcKxzt3y2mEvi&v=eq_hS1Ung0U&feature=youtu.be" target="_blank" rel="noreferrer">
+              <img src={movie4} alt="" />
+              <p>Mengenal Aneka Ragam Hiasan yang ada di indonesia</p>
+            </a>
+          </div>
 
-          ))}
+          <div className="movie-card">
+            <a href = "https://www.youtube.com/watch?si=Dcn0-CjLavsHfgi7&v=o-MdksQwhso&feature=youtu.be" target="_blank" rel="noreferrer">
+              <img src={movie5} alt="" />
+              <p>Mengenal Cara membuat patung kita bisa belajar lewat video ini</p>
+            </a>
+          </div>
 
+          <div className="movie-card">
+            <a href = "https://www.youtube.com/watch?v=kUMRJ0dz_J4" target="_blank" rel="noreferrer">
+              <img src={movie6} alt="" />
+              <p>Sebaram Flora dan Fauna di Indonesia 
+              Mengenai Aneka Ragam Hias dari Berbagai Daerah di Indonesia</p>
+            </a>
+          </div>
         </div>
-
       </section>
 
-      {/* FEEDBACK */}
+      {/* ================= FEEDBACK ================= */}
+
       <section
         className="feedback-section"
         id="feedback"
       >
-
-        <h4>Hubungi Kami</h4>
-
         <h2>Feedback</h2>
 
-        <div className="feedback-box">
+        <div className="title-line"></div>
 
-          <textarea
-            placeholder="Ketik pesan..."
+        <textarea placeholder="Ketik pesan..." />
 
-            value={message}
-
-            onChange={(e) =>
-              setMessage(e.target.value)
-            }
-
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                handleSend();
-              }
-            }}
-          />
-
-          <button onClick={handleSend}>
-            Send !
-          </button>
-
-        </div>
-
+        <button className="send-btn">
+          Send
+        </button>
       </section>
 
-      {/* FOOTER */}
-      <footer>
-
-        <div className="footer-container">
-
-          {/* kiri */}
-          <div>
-
-            <h3>Navigation</h3>
-
-            <a href="#home">Home</a>
-
-            <Link to="/about">
-              About Us
-            </Link>
-
-            <Link to="/information">
-              Information
-            </Link>
-
-            <a href="#movie">Movie</a>
-
-            <a href="#feedback">
-              Feedback
-            </a>
-
-          </div>
-
-          {/* tengah */}
-          <div className="footer-center">
-
-            <img
-              src={profile}
-              alt=""
-            />
-
-            <h1>AKSARAMA</h1>
-
-            <a
-              href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
-              target="_blank"
-              rel="noreferrer"
-              className="ig-btn"
-            >
-              Instagram
-            </a>
-
-            <div className="footer-links">
-
-              <Link to="/about">
-                About
-              </Link>
-
-              <Link to="/contact">
-                Contact Us
-              </Link>
-
-              <a href="#feedback">
-                Feedback
-              </a>
-
-            </div>
-
-          </div>
-
-          {/* kanan */}
-          <div>
-
-            <h3>Get in Touch</h3>
-
-            <p>
-              +62 895-4230-12443
-            </p>
-
-            <p>
-              kelompok6@gmail.com
-            </p>
-
-          </div>
-
-        </div>
-
-      </footer>
-
+      {/* ================= FOOTER ================= */}
+      <Footer />
     </div>
   );
 }

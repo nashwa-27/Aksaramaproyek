@@ -1,0 +1,60 @@
+
+.footer{
+  background:linear-gradient(
+    180deg,
+    #b58cff,
+    #2a82ff
+  );
+
+  padding:50px 40px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:30px;
+
+  color:white;
+}
+
+.footer-left,
+.footer-center,
+.footer-right{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-center{
+  text-align:center;
+}
+
+.profile-img{
+  width:95px;
+
+  margin-bottom:12px;
+}
+
+.instagram-icon{
+  width:35px;
+
+  margin-top:10px;
+
+  transition:0.2s ease;
+}
+
+.instagram-icon:hover{
+  transform:translateY(-2px);
+}
+
+.footer-left{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.footer-left a{
+  color:white;
+  text-decoration:none;
+}

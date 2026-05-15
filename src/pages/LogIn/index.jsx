@@ -1,6 +1,10 @@
 import React from "react";
 import "./index.css";
+
 import { useNavigate } from "react-router-dom";
+
+import profile from "../../assets/profile.png";
+import bgLogin from "../../assets/bgLogin.webp";
 
 function Login() {
 
@@ -8,13 +12,27 @@ function Login() {
 
   return (
 
-    <div className="container">
+    <div
+      className="container"
+
+      style={{
+        backgroundImage: `url(${bgLogin})`,
+      }}
+    >
 
       <div className="card">
 
-        <div className="circle"></div>
+        {/* PROFILE */}
+
+        <img
+          src={profile}
+          alt=""
+          className="profile-img"
+        />
 
         <h2>Login</h2>
+
+        {/* INPUT */}
 
         <input
           type="email"
@@ -26,30 +44,30 @@ function Login() {
           placeholder="Password"
         />
 
-        <div className="remember">
-
-          <input type="checkbox" />
-
-          Remember me
-
-        </div>
+        {/* BUTTON */}
 
         <button
           className="btn"
 
           onClick={() => navigate("/")}
         >
+
           Login
+
         </button>
 
-        <p>
+        {/* SIGNUP */}
+
+        <p className="signup-text">
 
           Dont Have an Account?{" "}
 
           <span
             onClick={() => navigate("/SignUp")}
           >
+
             Sign Up
+
           </span>
 
         </p>
@@ -57,6 +75,7 @@ function Login() {
       </div>
 
     </div>
+
   );
 }
 

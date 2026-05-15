@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
+
+import { useNavigate } from "react-router-dom";
+
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+
+import bginformation from "../../assets/bginformation.webp";
+import MaskotAksarama from "../../assets/MaskotAksarama.png";
 
 function Information() {
 
+  const navigate = useNavigate();
+
   const [currentLevel, setCurrentLevel] =
     useState(1);
+
+  useEffect(() => {
+
+    const savedLevel =
+      localStorage.getItem("aksaramaLevel");
+
+    if (savedLevel) {
+
+      setCurrentLevel(
+        parseInt(savedLevel)
+      );
+
+    }
+
+  }, []);
 
   const levels = [
 
@@ -28,145 +53,132 @@ function Information() {
 
   ];
 
+  const handleStart = () => {
+
+    if (currentLevel === 1) {
+
+      navigate("/Tahapan1");
+
+    }
+
+    else if (currentLevel === 2) {
+
+      navigate("/Tahapan2");
+
+    }
+
+    else {
+
+      navigate("/Tahapan3");
+
+    }
+
+  };
+
   return (
 
-    <div className="info-container">
+    <div
+      className="info-container"
 
-      <nav className="info-navbar">
+      style={{
+        backgroundImage:
+          `url(${bginformation})`,
+      }}
+    >
 
-        <h1 className="logo">
-          AKSARAMA
-        </h1>
+      <Navbar />
 
-        <div className="nav-links">
+      <div className="info-wrapper">
 
-          <a href="/">
-            Home
-          </a>
-
-          <a href="/information">
-            Information
-          </a>
-
-        </div>
-
-      </nav>
-
-      <div className="hero-box">
-
-        <div className="hero-left">
-
-          Di sesi ini kamu <br />
-          dapat menguji <br />
-          pemahamanmu
-
-        </div>
+        <h2 className="adventure-text">
+          Lets start your adventure
+        </h2>
 
         <img
-          src="MaskotAksarama.png"
+          src={MaskotAksarama}
           alt=""
-          className="character"
+          className="maskot"
         />
 
-        <div className="hero-right">
+        <div className="hero-box">
 
-          mulai dari <br />
-          tahapan 1.
+          <div className="hero-text">
+            Di sesi ini kamu dapat
+            menguji pemahamanmu
+          </div>
 
-        </div>
-
-      </div>
-
-      <div className="progress-wrapper">
-
-        <p>Progress Kamu</p>
-
-        <div className="progress-bar">
-
-          <div
-            className="progress-fill"
-
-            style={{
-              width:
-                `${(currentLevel / 3) * 100}%`,
-            }}
-          ></div>
+          <div className="hero-text right">
+            mulai dari
+            tahapan 1.
+          </div>
 
         </div>
 
-      </div>
+        <div className="level-container">
 
-      <div className="level-container">
+          {levels.map((level) => {
 
-        {levels.map((level) => {
+            const unlocked =
+              currentLevel >= level.id;
 
-          const unlocked =
-            currentLevel >= level.id;
-
-          return (
-
-            <div
-              className="level-row"
-              key={level.id}
-            >
+            return (
 
               <div
-                className={
-                  unlocked
-                    ? "level-icon active"
-                    : "level-icon locked"
-                }
+                className="level-row"
+                key={level.id}
               >
 
-                {unlocked ? "▶" : "🔒"}
+                <div
+                  className={
+                    unlocked
+                      ? "level-icon active"
+                      : "level-icon locked"
+                  }
+                >
+
+                  {unlocked ? "▶" : "🔒"}
+
+                </div>
+
+                <div
+                  className={
+                    unlocked
+                      ? "level-card active-card"
+                      : "level-card"
+                  }
+                >
+
+                  <h3>{level.title}</h3>
+
+                  <p>{level.desc}</p>
+
+                </div>
 
               </div>
 
-              <div
-                className={
-                  unlocked
-                    ? "level-card active-card"
-                    : "level-card"
-                }
-              >
-
-                <h3>{level.title}</h3>
-
-                <p>{level.desc}</p>
-
-              </div>
-
-            </div>
-
-          );
-
-        })}
-
-      </div>
-
-      <button
-        className="start-btn"
-
-        onClick={() => {
-
-          if (currentLevel < 3) {
-
-            setCurrentLevel(
-              currentLevel + 1
             );
 
-          }
+          })}
 
-        }}
-      >
+        </div>
 
-        Mulai Petualanganmu →
+        <button
+          className="start-btn"
+          onClick={handleStart}
+        >
 
-      </button>
+          Mulai Petualanganmu ➜
+
+        </button>
+
+      </div>
+
+      <Footer />
 
     </div>
 
   );
+
 }
 
 export default Information;

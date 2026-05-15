@@ -1,0 +1,63 @@
+.navbar{
+  width:100%;
+  height:85px;
+
+  position:fixed;
+  top:0;
+  z-index:999;
+
+  background:rgba(255,255,255,0.96);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 40px;
+
+  border-bottom:
+  1px solid rgba(0,0,0,0.05);
+}
+
+.logo{
+  width:135px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:black;
+  font-weight:500;
+
+  transition:0.2s ease;
+}
+
+.nav-links a:hover{
+  color:#9a5cff;
+}
+
+.login-btn{
+  padding:11px 24px;
+
+  border:none;
+  border-radius:30px;
+
+  background:linear-gradient(
+    90deg,
+    #b06dff,
+    #4c7dff
+  );
+
+  color:white;
+
+  text-decoration:none;
+
+  transition:0.2s ease;
+}
+
+.login-btn:hover{
+  transform:translateY(-2px);
+}

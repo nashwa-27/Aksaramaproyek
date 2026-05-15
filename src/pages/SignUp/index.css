@@ -1,91 +1,230 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+  font-family:'Poppins', sans-serif;
 }
 
+body{
+  overflow:hidden;
+}
 
-.container {
-  /* height: 100vh;
-  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-   height: 100vh;
+/* ================= CONTAINER ================= */
+
+.container{
+  width:100%;
+  height:100vh;
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ================= CARD ================= */
+
+.card{
+  width:430px;
+
   background:
-    linear-gradient(to right, rgba(255,255,255,0.6), rgba(200,220,255,0.6)),
-    url("../../assets/bg.png");
-  background-size: cover;
-  background-position: center;
+  rgba(255,255,255,0.25);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  backdrop-filter:blur(4px);
+
+  border:
+  1px solid rgba(255,255,255,0.3);
+
+  border-radius:28px;
+
+  padding:45px 40px;
+
+  text-align:center;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.15);
+
+  animation:fadeUp 1s ease;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 40px;
-  border-radius: 20px;
-  width: 350px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 2;
+/* ================= PROFILE ================= */
+
+.profile-img{
+  width:110px;
+  height:110px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  margin-bottom:15px;
+
+  border:4px solid white;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,0.2);
+
+  animation:floating 3s infinite ease-in-out;
 }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  background: #19d3c5;
-  border-radius: 50%;
-  margin: 0 auto 10px;
+/* ================= TITLE ================= */
+
+.card h2{
+  color:#20549e;
+
+  font-size:34px;
+  font-weight:700;
+
+  margin-bottom:25px;
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #2c3e50;
+/* ================= ROW ================= */
+
+.row{
+  display:flex;
+  gap:12px;
 }
 
-.row {
-  display: flex;
-  gap: 10px;
+/* ================= INPUT ================= */
+
+.card input{
+  width:100%;
+
+  padding:15px;
+
+  margin-top:15px;
+
+  border-radius:15px;
+
+  border:2px solid #7c8cff;
+
+  outline:none;
+
+  background:
+  rgba(255,255,255,0.8);
+
+  font-size:15px;
+
+  transition:0.3s;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid #4a90e2;
-  outline: none;
+.card input:focus{
+  border-color:#4f46e5;
+
+  transform:scale(1.02);
 }
 
-.btn {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 20px;
-  background: linear-gradient(to right, #ff4e50, #f9d423);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+/* ================= BUTTON ================= */
+
+.btn{
+  width:100%;
+
+  padding:15px;
+
+  margin-top:28px;
+
+  border:none;
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #ff6ec7,
+    #6c63ff
+  );
+
+  color:white;
+
+  font-size:18px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
 }
 
-.login-text {
-  margin-top: 10px;
-  font-size: 12px;
+.btn:hover{
+  transform:
+  translateY(-4px)
+  scale(1.02);
+
+  box-shadow:
+  0 10px 20px rgba(108,99,255,0.35);
 }
 
-.login-text span {
-  color: blue;
-  cursor: pointer;
+/* ================= LOGIN TEXT ================= */
+
+.login-text{
+  margin-top:22px;
+
+  color:#374151;
+
+  font-size:15px;
 }
-span {
-  color: blue;
-  cursor: pointer;
+
+.login-text span{
+  color:#4f46e5;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.login-text span:hover{
+  color:#7c3aed;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes floating{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:500px){
+
+  .card{
+    width:90%;
+    padding:35px 25px;
+  }
+
+  .row{
+    flex-direction:column;
+    gap:0;
+  }
+
 }
