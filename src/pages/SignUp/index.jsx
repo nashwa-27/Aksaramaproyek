@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 
 import { useNavigate } from "react-router-dom";
 
 import profile from "../../assets/profile.png";
 import bgLogin from "../../assets/bgLogin.webp";
+import { onSignUp } from "../../service/auth";
 
 function SignUp() {
 
@@ -67,7 +68,7 @@ function SignUp() {
         <button
           className="btn"
 
-          onClick={() => navigate("/LogIn")}
+          onClick={() => onSignUp()}
         >
 
           Sign Up
