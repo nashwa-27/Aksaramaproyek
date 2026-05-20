@@ -5,6 +5,7 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins', sans-serif;
+  text-align:left;
 
   scroll-behavior:smooth;
 }
@@ -417,12 +418,12 @@ body{
 
   .hero-text{
     width:100%;
-
-    text-align:center;
+    text-align:left;
+    font-size: 5px;
   }
 
   .right{
-    text-align:center;
+    text-align:right;
   }
 
   .maskot{

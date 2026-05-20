@@ -10,6 +10,7 @@ import Tahapan1 from "./pages/Tahapan1";
 import Tahapan2 from "./pages/Tahapan2";  
 import Tahapan3 from "./pages/Tahapan3";
 import AboutUs from "./pages/AboutUS";
+import Games1 from "./pages/Games1";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />}/>
         <Route path="/Tahapan2" element={<Tahapan2 />}/>
         <Route path="/Tahapan3" element={<Tahapan3 />}/>  
+        <Route path="/Games1" element={<Games1 />}/>
         
       </Routes>
     </BrowserRouter>

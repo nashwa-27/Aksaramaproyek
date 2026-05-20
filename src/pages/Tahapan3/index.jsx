@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -11,6 +11,9 @@ import MaskotAksarama from "../../assets/MaskotAksarama.png";
 function InformationMateri() {
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const { from } = location.state || {};
 
   return (
 
@@ -33,7 +36,7 @@ function InformationMateri() {
           <div className="hero-text">
 
             Di sesi ini kamu dapat menguji
-            pemahamanmu mulai dari tahapan 3.
+            pemahamanmu mulai dari {from}.
 
           </div>
 

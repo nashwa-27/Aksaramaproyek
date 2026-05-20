@@ -4,7 +4,6 @@ import "./index.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-import bgkosong from "../../assets/bgkosong.png";
 
 import zaza from "../../assets/zaza.png";
 import abel from "../../assets/abel.webp";
@@ -16,9 +15,6 @@ function AboutUs() {
   return (
     <div
       className="about-page"
-      style={{
-        backgroundImage: `url(${bgkosong})`,
-      }}
     >
       {/* NAVBAR */}
       <Navbar />

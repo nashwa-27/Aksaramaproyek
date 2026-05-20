@@ -53,11 +53,13 @@ function Information() {
 
   ];
 
+  
+
   const handleStart = () => {
 
     if (currentLevel === 1) {
 
-      navigate("/Tahapan1");
+      navigate("/Tahapan1", { state: { from: 'tahapan 1' } });
 
     }
 
