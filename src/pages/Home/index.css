@@ -290,12 +290,7 @@ body{
 }
 
 .funfact-container img{
-<<<<<<< HEAD
   width:240px;
-=======
-  width:400px;
-
->>>>>>> 47277d8c291b8e265d61f2171380b6622fd4e2ea
   border-radius:18px;
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);

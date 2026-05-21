@@ -30,5 +30,4 @@ export const onSignUp = async (FirstName, LastName, UserEmail, Password, navigat
 
         navigate ("/");
 
-
 }
