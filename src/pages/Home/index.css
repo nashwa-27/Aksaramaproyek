@@ -178,7 +178,7 @@ body{
 }
 
 .gallery img{
-  width:220px;
+  width:400px;
   height:300px;
 
   object-fit:cover;
@@ -295,7 +295,7 @@ body{
 }
 
 .funfact-container img{
-  width:240px;
+  width:400px;
 
   border-radius:18px;
 
