@@ -26,6 +26,7 @@ import profile from "../../assets/profile.png";
 import instagram from "../../assets/instagram.png";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Background from "../../components/Background";
 
 function Home() {
   return (
@@ -35,6 +36,7 @@ function Home() {
       //   backgroundImage: `url(${bgkosong})`,
       // }}
     >
+      <Background />
       {/* ================= NAVBAR ================= */}
 
       <Navbar />
