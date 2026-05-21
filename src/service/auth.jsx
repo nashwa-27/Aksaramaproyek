@@ -1,5 +1,5 @@
 // 1. PASTIKAN PATH INI BENAR (Sesuaikan jika letak foldernya berbeda)
-import { supabase } from "../lib/supabaseClient"; 
+import { supabase } from "../lib/supabaseClient";
 
 // SIGN UP
 export const onSignUp = async (
