@@ -32,11 +32,3 @@ export const onSignUp = async (FirstName, LastName, UserEmail, Password, navigat
 
 
 }
-//signIn
-export const onSignIn = async (UserEmail, Password, navigate) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
-        email: UserEmail,
-        password: Password
-    }); 
-}
-
