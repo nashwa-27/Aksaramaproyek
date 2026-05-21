@@ -291,12 +291,9 @@ body{
 
 .funfact-container img{
   width:240px;
-
   border-radius:18px;
-
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);
-
   transition:0.2s ease;
 }
 
