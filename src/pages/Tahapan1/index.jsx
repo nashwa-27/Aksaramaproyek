@@ -162,41 +162,24 @@
 import React from "react";
 import "./index.css";
 
-import { useNavigate } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation
+} from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+
+import MaskotAksarama from "../../assets/MaskotAksarama.png";
 
 function Tahapan1() {
 
   const navigate = useNavigate();
 
-  const lanjutBaca = () => {
+  const location = useLocation();
 
-    localStorage.setItem(
-      "aksaramaLevel",
-      2
-    );
-
-    localStorage.setItem(
-      "aksaramaMode",
-      "materi"
-    );
-
-    navigate("/Information");
-
-  };
-
-  const mulaiLatihan = () => {
-
-    localStorage.setItem(
-      "aksaramaMode",
-      "games"
-    );
-
-    navigate("/Information");
-
-  };
+  const { from } =
+    location.state || {};
 
   return (
 
@@ -204,39 +187,158 @@ function Tahapan1() {
 
       <Navbar />
 
-      <div className="materi-wrapper">
+      {/* HERO */}
 
-        <h1>Tahapan 1</h1>
+      <section className="hero-section">
+
+        <div className="hero-box">
+
+          <div className="hero-text">
+
+            Di sesi ini kamu dapat
+            mempelajari materi dari
+            {from}.
+
+          </div>
+
+          <img
+            src={MaskotAksarama}
+            alt=""
+            className="hero-img"
+          />
+
+        </div>
+
+      </section>
+
+      {/* BAB 1 */}
+
+      <section className="materi-section">
+
+        <h2>BAB 1</h2>
 
         <div className="materi-card">
 
           <p>
-            Isi materi tahapan 1...
+
+            Kebudayaan sejatinya adalah
+            Operating System (OS) dalam
+            kehidupan kita yang berjalan
+            di latar belakang untuk
+            menentukan cara kita berpikir,
+            bertindak, dan berkarya.
+
+          </p>
+
+          <br />
+
+          <p>
+
+            Tanpa OS yang solid,
+            perangkat secanggih apa pun
+            akan mengalami lag.
+
+          </p>
+
+          <br />
+
+          <p>
+
+            Di Indonesia, source code
+            utama dari sistem ini adalah
+            nilai Ketuhanan serta
+            Gotong Royong.
+
           </p>
 
         </div>
 
-        <div className="button-wrapper">
+      </section>
 
-          <button
-            className="btn"
-            onClick={lanjutBaca}
-          >
+      {/* BAB 2 */}
 
-            Lanjut Baca
+      <section className="materi-section">
 
-          </button>
+        <h2>BAB 2</h2>
 
-          <button
-            className="btn latihan"
-            onClick={mulaiLatihan}
-          >
+        <div className="materi-card">
 
-            Mulai Latihan
+          <p>
 
-          </button>
+            Motif Batik dan ukiran
+            Toraja membuktikan bahwa
+            nenek moyang kita sudah
+            memahami komposisi visual.
+
+          </p>
+
+          <br />
+
+          <p>
+
+            Mereka mampu menciptakan
+            identitas budaya yang
+            unik dan estetik.
+
+          </p>
+
+          <br />
+
+          <p>
+
+            Seni rupa daerah bukan
+            hanya soal pola, tetapi
+            juga filosofi kehidupan.
+
+          </p>
 
         </div>
+
+      </section>
+
+      {/* BUTTON */}
+
+      <div className="btn-group">
+
+        <button
+
+          className="next-btn"
+
+          onClick={() => {
+
+            localStorage.setItem(
+              "aksaramaMode",
+              "materi"
+            );
+
+            navigate("/Information");
+
+          }}
+        >
+
+          Lanjut Membaca
+
+        </button>
+
+        <button
+
+          className="game-btn"
+
+          onClick={() => {
+
+            localStorage.setItem(
+              "aksaramaMode",
+              "games"
+            );
+
+            navigate("/Games1");
+
+          }}
+        >
+
+          Mulai Melatih
+
+        </button>
 
       </div>
 

@@ -197,6 +197,7 @@ body{
   margin:0;
   padding:0;
   box-sizing:border-box;
+
   font-family:'Poppins', sans-serif;
 }
 
@@ -214,30 +215,78 @@ body{
   padding-bottom:80px;
 }
 
+.mode-wrapper{
+  display:flex;
+  justify-content:center;
+
+  gap:20px;
+
+  padding-top:120px;
+}
+
+.mode-btn{
+  padding:14px 40px;
+
+  border:none;
+  border-radius:30px;
+
+  background:white;
+
+  color:#2563eb;
+
+  font-size:18px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.active-mode{
+
+  background:
+  linear-gradient(
+    90deg,
+    #c084fc,
+    #3b82f6
+  );
+
+  color:white;
+}
+
 .info-wrapper{
   width:90%;
+
   margin:auto;
+
   padding-top:40px;
 }
 
 .adventure-text{
   text-align:center;
+
   color:#3566c7;
-  font-size:28px;
+
+  font-size:30px;
+
   margin-bottom:20px;
 }
 
 .maskot{
   width:180px;
+
   display:block;
+
   margin:auto;
 }
 
 .hero-box{
   width:90%;
+
   margin:20px auto;
 
-  background:linear-gradient(
+  background:
+  linear-gradient(
     90deg,
     #c084fc,
     #3b82f6
@@ -252,14 +301,12 @@ body{
   align-items:center;
 
   color:white;
-
-  box-shadow:
-  0 8px 20px rgba(0,0,0,0.12);
 }
 
 .hero-text{
   font-size:24px;
   font-weight:600;
+
   width:35%;
 }
 
@@ -267,51 +314,21 @@ body{
   text-align:right;
 }
 
-/* TAB */
-
-.tab-wrapper{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-
-  margin-top:35px;
-}
-
-.tab-btn{
-  padding:10px 40px;
-
-  border:2px solid #f8a5c2;
-  border-radius:30px;
-
-  background:white;
-
-  color:#20549e;
-
-  cursor:pointer;
-}
-
-.active-tab{
-  background:linear-gradient(
-    90deg,
-    #c084fc,
-    #3b82f6
-  );
-
-  color:white;
-}
-
-/* LEVEL */
-
 .level-container{
   width:85%;
+
   margin:50px auto;
 }
 
 .level-row{
   display:flex;
   align-items:center;
+
   gap:20px;
+
   margin-bottom:30px;
+
+  cursor:pointer;
 }
 
 .level-icon{
@@ -324,18 +341,18 @@ body{
   justify-content:center;
   align-items:center;
 
+  background:#cbd5e1;
+
   color:white;
 
   font-size:22px;
   font-weight:bold;
+
+  transition:0.2s;
 }
 
 .active{
   background:#2563eb;
-}
-
-.locked{
-  background:#cbd5e1;
 }
 
 .level-card{
@@ -347,16 +364,21 @@ body{
 
   border-radius:18px;
 
-  box-shadow:
-  0 5px 15px rgba(0,0,0,0.08);
+  transition:0.2s;
 }
 
 .active-card{
-  border-left:6px solid #8b5cf6;
+  border-left:8px solid #2563eb;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 8px 20px rgba(37,99,235,0.18);
 }
 
 .level-card h3{
   color:#20549e;
+
   margin-bottom:8px;
 }
 
@@ -374,7 +396,8 @@ body{
   border:none;
   border-radius:40px;
 
-  background:linear-gradient(
+  background:
+  linear-gradient(
     90deg,
     #c084fc,
     #3b82f6

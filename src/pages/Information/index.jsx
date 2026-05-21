@@ -201,7 +201,7 @@ function Information() {
 
   const navigate = useNavigate();
 
-  const [currentLevel, setCurrentLevel] =
+  const [selectedLevel, setSelectedLevel] =
     useState(1);
 
   const [mode, setMode] =
@@ -209,18 +209,13 @@ function Information() {
 
   useEffect(() => {
 
-    const savedLevel =
-      localStorage.getItem("aksaramaLevel");
-
     const savedMode =
       localStorage.getItem("aksaramaMode");
 
-    if (savedLevel) {
-      setCurrentLevel(parseInt(savedLevel));
-    }
-
     if (savedMode) {
+
       setMode(savedMode);
+
     }
 
   }, []);
@@ -251,13 +246,19 @@ function Information() {
 
     if (mode === "materi") {
 
-      navigate(`/Tahapan${currentLevel}`);
+      navigate(`/Tahapan${selectedLevel}`, {
+
+        state: {
+          from: `Tahapan ${selectedLevel}`,
+        },
+
+      });
 
     }
 
     else {
 
-      navigate(`/Games${currentLevel}`);
+      navigate(`/Games${selectedLevel}`);
 
     }
 
@@ -276,10 +277,62 @@ function Information() {
 
       <Navbar />
 
+      <div className="mode-wrapper">
+
+        <button
+          className={
+            mode === "materi"
+              ? "mode-btn active-mode"
+              : "mode-btn"
+          }
+
+          onClick={() => {
+
+            setMode("materi");
+
+            localStorage.setItem(
+              "aksaramaMode",
+              "materi"
+            );
+
+          }}
+        >
+
+          Information
+
+        </button>
+
+        <button
+          className={
+            mode === "games"
+              ? "mode-btn active-mode"
+              : "mode-btn"
+          }
+
+          onClick={() => {
+
+            setMode("games");
+
+            localStorage.setItem(
+              "aksaramaMode",
+              "games"
+            );
+
+          }}
+        >
+
+          Games
+
+        </button>
+
+      </div>
+
       <div className="info-wrapper">
 
         <h2 className="adventure-text">
+
           Lets start your adventure
+
         </h2>
 
         <img
@@ -291,116 +344,65 @@ function Information() {
         <div className="hero-box">
 
           <div className="hero-text">
-            Di sesi ini kamu dapat
-            menguji pemahamanmu
+
+            Pilih tahapan
+            petualanganmu
+
           </div>
 
           <div className="hero-text right">
-            mulai dari
-            tahapan {currentLevel}.
+
+            lalu mulai
+            perjalananmu
+
           </div>
 
         </div>
 
-        {/* TAB */}
-
-        <div className="tab-wrapper">
-
-          <button
-            className={
-              mode === "materi"
-              ? "tab-btn active-tab"
-              : "tab-btn"
-            }
-
-            onClick={() => {
-
-              setMode("materi");
-
-              localStorage.setItem(
-                "aksaramaMode",
-                "materi"
-              );
-
-            }}
-          >
-
-            Materi
-
-          </button>
-
-          <button
-            className={
-              mode === "games"
-              ? "tab-btn active-tab"
-              : "tab-btn"
-            }
-
-            onClick={() => {
-
-              setMode("games");
-
-              localStorage.setItem(
-                "aksaramaMode",
-                "games"
-              );
-
-            }}
-          >
-
-            Games
-
-          </button>
-
-        </div>
-
-        {/* LEVEL */}
-
         <div className="level-container">
 
-          {levels.map((level) => {
+          {levels.map((level) => (
 
-            const unlocked =
-              currentLevel >= level.id;
+            <div
+              className="level-row"
+              key={level.id}
 
-            return (
+              onClick={() =>
+                setSelectedLevel(level.id)
+              }
+            >
 
               <div
-                className="level-row"
-                key={level.id}
+
+                className={
+                  selectedLevel === level.id
+                    ? "level-icon active"
+                    : "level-icon"
+                }
               >
 
-                <div
-                  className={
-                    unlocked
-                    ? "level-icon active"
-                    : "level-icon locked"
-                  }
-                >
-
-                  {unlocked ? "▶" : "🔒"}
-
-                </div>
-
-                <div
-                  className={
-                    unlocked
-                    ? "level-card active-card"
-                    : "level-card"
-                  }
-                >
-
-                  <h3>{level.title}</h3>
-
-                  <p>{level.desc}</p>
-
-                </div>
+                ▶
 
               </div>
 
-            );
+              <div
 
-          })}
+                className={
+                  selectedLevel === level.id
+                    ? "level-card active-card"
+                    : "level-card"
+                }
+              >
+
+                <h3>{level.title}</h3>
+
+                <p>{level.desc}</p>
+
+              </div>
+
+            </div>
+
+          ))}
 
         </div>
 
