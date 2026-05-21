@@ -28,56 +28,30 @@ export const onSignUp = async (
     return;
   }
 
-  // insert ke tabel users
-  const {
-    error: insertError
-  } = await supabase
-    .from("users")
-    .insert([
-      {
-        id: signUpData?.user?.id,
-        email: UserEmail,
-        first_name: FirstName,
-        last_name: LastName,
-        current_chapter_id: 1
-      }
-    ]);
+        
 
-  // cek error insert
-  if (insertError) {
-    console.log(
-      "Insert Error:",
-      insertError.message
-    );
-    return;
-  }
-
-  // simpan local storage
-  localStorage.setItem(
-    "userData",
-    JSON.stringify(signUpData?.user)
-  );
-
-  // pindah halaman
-  navigate("/");
-};
+        // const { error: insertError } = await supabase.from("users").insert([
+        //     {
+        //        id: data?.user?.id,
+        //         email: UserEmail,
+        //        first_name: FirstName,
+        //        last_name: LastName
+        //     }
+        // ])
+// set local storage
+        localStorage.setItem("userData", JSON.stringify(data?.user));
 
 
 
-// SIGN IN
-export const onSignIn = async (
-  email,
-  password,
-  navigate
-) => {
+        navigate ("/");
 
-  const {
-    data: signInData,
-    error: signInError
-  } = await supabase.auth.signInWithPassword({
-    email,
-    password
-  });
+
+}
+//signup
+export const onSignIn = async (FirstName, LastName, UserEmail, Password) => {
+        const { data, error } = await supabase.auth.signUp({ 
+           
+        });
 
   if (signInError) {
     console.log(
