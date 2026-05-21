@@ -38,7 +38,7 @@ const Navbar = () => {
                     Information
                 </Link>
 
-                <Link to="/Games1">
+                <Link to="/Information">
                     Games
                 </Link>
 
