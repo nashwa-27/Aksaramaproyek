@@ -1,9 +1,11 @@
 import { supabase } from "../lib/supabseClient";
 
-export const onSignUp = async (FirstName, LastName, UserEmail, Password) => {
+
+export const onSignUp = async (FirstName, LastName, UserEmail, Password, navigate) => {
+        
         const { data, error } = await supabase.auth.signUp({ 
-            email: 'giza23@yopmail.com',
-            password: '12345678'
+            email: UserEmail,
+            password: Password
         });
 
         if (error) {
@@ -11,12 +13,30 @@ export const onSignUp = async (FirstName, LastName, UserEmail, Password) => {
             return;
         }
 
-        const { error: insertError } = await supabase.form("users").insert([
-            {
-               id: data?.user?.id,
-                email: "email@gmail.com",
-               fisrt_name: "Giza",
-               last_name: "Aura Widyandhari"
-            }
-        ])
+        
+
+        // const { error: insertError } = await supabase.from("users").insert([
+        //     {
+        //        id: data?.user?.id,
+        //         email: UserEmail,
+        //        first_name: FirstName,
+        //        last_name: LastName
+        //     }
+        // ])
+// set local storage
+        localStorage.setItem("userData", JSON.stringify(data?.user));
+
+
+
+        navigate ("/");
+
+
 }
+//signIn
+export const onSignIn = async (UserEmail, Password, navigate) => {
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email: UserEmail,
+        password: Password
+    }); 
+}
+

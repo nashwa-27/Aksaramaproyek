@@ -3,9 +3,14 @@ import Aksarama from "../../assets/Aksarama.webp";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import Profile from "../../assets/profile.png";
 
 
 const Navbar = () => {
+    // get local storage
+    const userData = localStorage.getItem("userData")
+
+    console.log("User Data: ", userData)
 
     return (
         <header className="navbar">
@@ -33,7 +38,7 @@ const Navbar = () => {
                     Information
                 </Link>
 
-                <Link to="/Games">
+                <Link to="/Games1">
                     Games
                 </Link>
 
@@ -41,13 +46,25 @@ const Navbar = () => {
                     Feedback
                 </HashLink>
             </nav>
-
-            <Link
-                to="/login"
-                className="login-btn"
-            >
-                Login
-            </Link>
+        
+            {userData ? (
+                <div>
+                   <Link
+                    to="/login"
+                    onClick={() => localStorage.clear()}
+                    className="logout-btn"
+                >
+                    Logout
+                </Link>
+                </div>
+            ) : (
+                <Link
+                    to="/login"
+                    className="login-btn"
+                >
+                    Login
+                </Link>
+            )}
         </header>
     )
 }

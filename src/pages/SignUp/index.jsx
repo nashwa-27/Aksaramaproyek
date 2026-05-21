@@ -10,7 +10,12 @@ import { onSignUp } from "../../service/auth";
 function SignUp() {
 
   const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  
   return (
 
     <div
@@ -40,11 +45,15 @@ function SignUp() {
           <input
             type="text"
             placeholder="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
 
           <input
             type="text"
             placeholder="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
           />
 
         </div>
@@ -54,6 +63,8 @@ function SignUp() {
         <input
           type="email"
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         {/* PASSWORD */}
@@ -61,6 +72,8 @@ function SignUp() {
         <input
           type="password"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         {/* BUTTON */}
@@ -68,7 +81,7 @@ function SignUp() {
         <button
           className="btn"
 
-          onClick={() => onSignUp()}
+          onClick={() => onSignUp(firstName, lastName, email, password, navigate)}
         >
 
           Sign Up

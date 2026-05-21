@@ -18,6 +18,7 @@ body{
 .materi-page{
   width:100%;
   min-height:100vh;
+  padding-top:100px;
 
   background-size:cover;
   background-position:center;
@@ -79,16 +80,13 @@ body{
 
 .materi-section{
   width:90%;
-
   margin:auto;
-
   margin-top:55px;
 }
 
 .materi-section h2{
   color:#0f4da8;
-
-  font-size:40px;
+  font-size:8px;
   font-weight:700;
 
   margin-bottom:20px;
@@ -96,9 +94,7 @@ body{
 
 .materi-card{
   width:82%;
-
   margin-left:auto;
-
   background:
   linear-gradient(
     90deg,
@@ -107,20 +103,15 @@ body{
   );
 
   border-radius:22px;
-
   padding:35px;
-
   box-shadow:
   0 5px 15px rgba(0,0,0,0.08);
 }
 
 .materi-card p{
   color:#111827;
-
-  font-size:20px;
-
+  font-size:8px;
   line-height:1.9;
-
   font-weight:500;
 }
 
@@ -135,9 +126,10 @@ body{
 
 .next-btn{
   padding:16px 70px;
-
+  
   border:none;
   border-radius:35px;
+  margin-bottom: 100px;
 
   background:
   linear-gradient(
@@ -169,7 +161,7 @@ body{
 
     text-align:center;
 
-    gap:20px;
+    gap:8px;
   }
 
   .hero-text{
