@@ -5,11 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 import profile from "../../assets/profile.png";
 import bgLogin from "../../assets/bgLogin.webp";
+import { onSignIn } from "../../service/auth";
 
 function Login() {
 
   const navigate = useNavigate();
-
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
   return (
 
     <div
@@ -37,11 +39,15 @@ function Login() {
         <input
           type="email"
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
           type="password"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         {/* BUTTON */}
@@ -49,7 +55,7 @@ function Login() {
         <button
           className="btn"
 
-          onClick={() => navigate("/")}
+          onClick={() => onSignIn(email, password, navigate)}
         >
 
           Login
