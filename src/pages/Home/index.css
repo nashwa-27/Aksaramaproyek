@@ -110,17 +110,14 @@ body{
 
 .hero h1{
   font-size:55px;
-
   color:#4c6fd8;
-
   margin-bottom:35px;
+  text-align: center;
 }
 
 .hero-box{
   width:72%;
-
   margin:auto;
-
   background:linear-gradient(
     90deg,
     #b67eff,
@@ -128,9 +125,7 @@ body{
   );
 
   border-radius:20px;
-
   padding:20px 30px;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -295,13 +290,10 @@ body{
 }
 
 .funfact-container img{
-  width:400px;
-
+  width:240px;
   border-radius:18px;
-
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);
-
   transition:0.2s ease;
 }
 
