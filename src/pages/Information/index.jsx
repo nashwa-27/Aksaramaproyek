@@ -16,9 +16,7 @@ import { ChapterButton } from "../../components/ChapterButton";
 function Information() {
 
   const navigate = useNavigate();
-
   const [selectedLevel, setSelectedLevel] = useState(1);
-
   const [mode, setMode] = useState("materi");
   // UNTUK MENYIMPAN DATA SEMENTARA
   const [chapterData, setChapterData] = useState([]);
@@ -42,21 +40,16 @@ function Information() {
       setMode(savedMode);
 
     }
-
   }, []);
 
   const handleStart = () => {
-
     if (mode === "materi") {
-
       navigate(`/Tahapan`, {
-
         state: {
           data: chapterData.find((chapter) => chapter.id === selectedLevel),
         },
 
       });
-
     }
 
     else {
@@ -79,8 +72,6 @@ function Information() {
     >
 
       <Navbar />
-
-
       <div className="info-wrapper">
 
         <h2 className="adventure-text">

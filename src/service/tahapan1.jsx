@@ -26,7 +26,7 @@ export const getDataGames = async () => {
         console.error("Error fetching chapter data:", error);
         return []; // Kembalikan array kosong jika terjadi error
     }
-    console.log("Data chapters:", data);
+    console.log("Data chapter:", data);
     localStorage.setItem("chapterData", JSON.stringify(data));
 
     const sortedData = data.sort((a, b) => a.id - b.id);
