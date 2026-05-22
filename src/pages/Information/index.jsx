@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 
 import bginformation from "../../assets/bginformation.webp";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
-import { getDataTahapan } from "../../service/tahapan1";
+import { getDataTahapan, getGamesByChapterId } from "../../service/tahapan1";
 import { HeroBoxComponent } from "../../components/heroBox";
 import { ChapterList } from "../../components/ChapterList";
 import { ChapterButton } from "../../components/ChapterButton";
@@ -21,6 +21,8 @@ function Information() {
   // UNTUK MENYIMPAN DATA SEMENTARA
   const [chapterData, setChapterData] = useState([]);
 
+  const isGamesPath = window.location.pathname === "/Games";
+
   // EKSEKUSI CODE PERTAMA KALI LOAD HALAMAN
   useEffect(() => {
     const fetchChapterData = async () => {
@@ -31,19 +33,10 @@ function Information() {
     };
 
     fetchChapterData();
-
-    const savedMode =
-      localStorage.getItem("aksaramaMode");
-
-    if (savedMode) {
-
-      setMode(savedMode);
-
-    }
   }, []);
 
-  const handleStart = () => {
-    if (mode === "materi") {
+  const handleStart = async() => {
+    if (!isGamesPath) {
       navigate(`/Tahapan`, {
         state: {
           data: chapterData.find((chapter) => chapter.id === selectedLevel),
@@ -51,11 +44,9 @@ function Information() {
 
       });
     }
-
     else {
-
-      navigate(`/Games${selectedLevel}`);
-
+      const gamesData = await getGamesByChapterId(selectedLevel);
+      navigate("/Games1", { state: { data: gamesData } });
     }
 
   };

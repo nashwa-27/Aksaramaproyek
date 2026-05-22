@@ -15,17 +15,18 @@ export const getDataTahapan = async () => {
     return sortedData;
 };
 // getDataTahapan
-export const getDataGames = async () => {
+export const getGamesByChapterId = async (chapterId) => {
     const { data, error } = await supabase
-        .from('chapter')
-        .select('id, created_at, question, option, answer,chapter_id');
+        .from('games')
+        .select('id, question, option, answer,chapter_id')
+        .eq('chapter_id', chapterId);
     
     if (error) {
         console.error("Error fetching chapter data:", error);
         return []; // Kembalikan array kosong jika terjadi error
     }
-    console.log("Data chapter:", data);
-    localStorage.setItem("chapterData", JSON.stringify(data));
+    console.log("Data games:", data);
+    localStorage.setItem("gamesData", JSON.stringify(data));
     const sortedData = data.sort((a, b) => a.id - b.id);
     return sortedData
 };

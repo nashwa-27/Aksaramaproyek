@@ -28,7 +28,15 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Background from "../../components/Background";
 
+import { testInsertFeedback } from "../../service/feedback";
+
 function Home() {
+  const [message, setMessage] = React.useState("");
+  const userData = localStorage.getItem("userData"); // string 
+  console.log("Data User yang Login:", userData);
+  const userEmail = userData ? JSON.parse(userData).email : "";
+  console.log("Data user JSON:", JSON.parse(userData));
+  // const navigate = useNavigate();
   return (
     <div
       className="home"
@@ -210,10 +218,18 @@ function Home() {
 
         <div className="title-line"></div>
 
-        <textarea placeholder="Ketik pesan..." />
+        <textarea
+          placeholder="Ketik pesan..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
 
-        <button className="send-btn">
+        <button
+          className="send-btn"
+          onClick={() => testInsertFeedback(userEmail, message, setMessage)}
+          >
           Send
+        
         </button>
       </section>
 

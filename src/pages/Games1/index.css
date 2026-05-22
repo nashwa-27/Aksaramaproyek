@@ -161,6 +161,20 @@ body{
   border:none;
 }
 
+.option-btn.wrong{
+
+  background:
+  linear-gradient(
+    90deg,
+    #c02d1d,
+    #f82a05
+  );
+
+  color:white;
+
+  border:none;
+}
+
 /* ================= SUBMIT ================= */
 
 .submit-wrapper{

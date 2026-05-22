@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import profile from "../../assets/profile.png";
 import bgLogin from "../../assets/bgLogin.webp";
-import { onSignUp } from "../../service/auth";
+import { onSignIn } from "../../service/auth";
 
 function Login() {
 

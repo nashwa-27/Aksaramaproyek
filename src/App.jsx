@@ -8,6 +8,7 @@ import LogIn from "./pages/LogIn";
 import Information from "./pages/Information"
 import Tahapan from "./pages/Tahapan";
 import AboutUs from "./pages/AboutUS";
+// import Games from "./pages/Games";
 import Games1 from "./pages/Games1";
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Information" element={<Information />}/>
         <Route path="/Tahapan" element={<Tahapan />}/>
         <Route path="/AboutUs" element={<AboutUs />}/>
+        <Route path="/Games" element={<Information />}/>
         <Route path="/Games1" element={<Games1 />}/>
         
       </Routes>

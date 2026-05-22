@@ -8,18 +8,16 @@ import {
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
+import { getGamesByChapterId } from "../../service/tahapan1";
 
-function Tahapan1() {
+function Tahapan() {
 
   const navigate = useNavigate();
-
   const location = useLocation();
-
   const { data } = location.state || {};
-
-  console.log("Data yang diterima di Tahapan dari halaman information:", data);
+  // const [gamesData, setGamesData] = React.useState([]);
+  // console.log("Data yang diterima di Tahapan dari halaman information:", data);
 
   return (
 
@@ -108,32 +106,17 @@ function Tahapan1() {
         </button>
 
         <button
-
           className="game-btn"
-
-          onClick={() => {
-
-            localStorage.setItem(
-              "aksaramaMode",
-              "games"
-            );
-
-            navigate("/Games1");
-
+          onClick={async () => {
+            const gamesData = await getGamesByChapterId(data?.id);
+            navigate("/Games1", { state: { data: gamesData } });
           }}
         >
-
           Mulai Melatih
-
         </button>
-
       </div>
-
       <Footer />
-
     </div>
-
   );
-
 }
-export default Tahapan1;
+export default Tahapan;
