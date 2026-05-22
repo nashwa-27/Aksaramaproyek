@@ -117,22 +117,22 @@ function Games3() {
       options: [
 
         {
-          text: "Mengemas nilai tradisi menjadi produk kreatif yang diminati pasar internasional",
+          text: "Membeli semua barang antik untuk disimpan sendiri",
           type: "A",
         },
 
         {
-          text: "Menjual budaya tanpa memahami maknanya",
+          text: "Menjual produk budaya dengan harga semurah mungkin",
           type: "B",
         },
 
         {
-          text: "Menyalin budaya negara lain sepenuhnya",
+          text: "Mengemas nilai tradisi menjadi produk kreatif yang diminati pasar internasional",
           type: "C",
         },
 
         {
-          text: "Menghapus unsur lokal agar lebih modern",
+          text: "Memaksa orang luar negeri untuk memakai baju daerah",
           type: "D",
         },
 

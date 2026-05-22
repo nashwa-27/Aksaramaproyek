@@ -68,7 +68,7 @@ function Games2() {
         },
 
         {
-          text: "Suara manusia yang direkam.",
+          text: "Gesekan antara dua helai rambut.",
           type: "D",
         },
 
@@ -100,7 +100,7 @@ function Games2() {
         },
 
         {
-          text: "Mengubah musik tradisional menjadi lagu luar negeri.",
+          text: "Mengubah semua musik modern agara hanya ada musik.",
           type: "D",
         },
 
@@ -117,24 +117,21 @@ function Games2() {
       options: [
 
         {
-          text: "Hanya boleh dilakukan oleh pemain profesional.",
-          type: "A",
-        },
-
-        {
-          text: "Menjadi penanda perubahan tahap kehidupan seseorang.",
-          type: "B",
-        },
-
-        {
-          text: "Dilakukan sambil bermain game online.",
-          type: "C",
-        },
-
-        {
-          text: "Memiliki hadiah berupa uang virtual.",
-          type: "D",
-        },
+    "text": "Setiap tahap hidup (lahir, nikah, mati) adalah pencapaian penting yang perlu dirayakan.",
+    "type": "A"
+  },
+  {
+    "text": "Warga harus mengumpulkan poin untuk memenangkan hadiah.",
+    "type": "B"
+  },
+  {
+    "text": "Upacaranya harus dilakukan secara online di depan layar komputer.",
+    "type": "C"
+  },
+  {
+    "text": "Upacara tersebut bisa menghidupkan kembali karakter yang sudah mati.",
+    "type": "D"
+  },
 
       ],
 
@@ -149,24 +146,21 @@ function Games2() {
       options: [
 
         {
-          text: "Agar musik daerah lebih mudah diterima generasi muda.",
-          type: "A",
-        },
-
-        {
-          text: "Supaya kita perlahan-lahan lupa dengan lagu asli daerah tersebut.",
-          type: "B",
-        },
-
-        {
-          text: "Agar semua lagu tradisional terdengar sama.",
-          type: "C",
-        },
-
-        {
-          text: "Menghapus unsur budaya lokal sepenuhnya.",
-          type: "D",
-        },
+    "text": "Supaya musik daerah tidak dianggap kuno dan bisa masuk playlist harian kita.",
+    "type": "A"
+  },
+  {
+    "text": "Supaya kita perlahan-lahan lupa dengan lagu asli daerah tersebut.",
+    "type": "B"
+  },
+  {
+    "text": "Supaya alat musik tradisional tidak perlu dimainkan lagi di masa depan.",
+    "type": "C"
+  },
+  {
+    "text": "Supaya alat musik tradisional tidak perlu dimainkan lagi di masa depan.",
+    "type": "D"
+  },
 
       ],
 
