@@ -56,9 +56,7 @@ function Tahapan1() {
       <section className="materi-section">
 
         <h2>BAB 1</h2>
-
         <div className="materi-card">
-
           <p>
 
             {data?.materi_1}
