@@ -20,16 +20,18 @@ function SignUp() {
 
     <div
       className="container"
+      
 
       style={{
         backgroundImage: `url(${bgLogin})`,
+        
       }}
     >
 
       <div className="card">
 
         {/* PROFILE */}
-
+      
         <img
           src={profile}
           alt=""

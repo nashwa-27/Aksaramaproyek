@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import { useLocation } from "react-router-dom";
+import Background from "../../components/Background";
 
 function Games1() {
   const location = useLocation();
@@ -143,6 +144,7 @@ function Games1() {
     <div className="games-page">
 
       <Navbar />
+      <Background />
 
       {/* HERO */}
 

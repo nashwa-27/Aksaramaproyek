@@ -8,7 +8,6 @@ import LogIn from "./pages/LogIn";
 import Information from "./pages/Information"
 import Tahapan from "./pages/Tahapan";
 import AboutUs from "./pages/AboutUS";
-// import Games from "./pages/Games";
 import Games1 from "./pages/Games1";
 
 

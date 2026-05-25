@@ -4,6 +4,7 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import Profile from "../../assets/profile.png";
+import { onSignIn, onSignOut } from "../../service/auth";
 
 
 const Navbar = () => {
@@ -50,8 +51,8 @@ const Navbar = () => {
             {userData ? (
                 <div>
                    <Link
-                    to="/login"
-                    onClick={() => localStorage.clear()}
+                    to="/Login"
+                    onClick={() => onSignOut()}
                     className="logout-btn"
                 >
                     Logout
@@ -59,7 +60,8 @@ const Navbar = () => {
                 </div>
             ) : (
                 <Link
-                    to="/login"
+                    to="/Login"
+                    onClick={() => onSignIn()}
                     className="login-btn"
                 >
                     Login

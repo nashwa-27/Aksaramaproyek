@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import { getGamesByChapterId } from "../../service/tahapan1";
+import Background from "../../components/Background";
 
 function Tahapan() {
 
@@ -24,6 +25,7 @@ function Tahapan() {
     <div className="materi-page">
 
       <Navbar />
+      <Background />
 
       {/* HERO */}
 

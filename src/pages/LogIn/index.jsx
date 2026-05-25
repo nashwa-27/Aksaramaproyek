@@ -24,7 +24,6 @@ function Login() {
 
       <div className="card">
 
-        {/* PROFILE */}
 
         <img
           src={profile}

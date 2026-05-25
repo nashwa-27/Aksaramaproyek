@@ -54,5 +54,5 @@ export const onSignOut = async () => {
     console.log(signOutError.message);
   }
 
-  localStorage.removeItem("userData");
+  localStorage.clear();
 };

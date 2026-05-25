@@ -10,6 +10,7 @@ import abel from "../../assets/abel.webp";
 import vici from "../../assets/vici.png";
 import giza from "../../assets/giza.png";
 import aca from "../../assets/aca.webp";
+import Background from "../../components/Background";
 
 function AboutUs() {
   return (
@@ -18,6 +19,7 @@ function AboutUs() {
     >
       {/* NAVBAR */}
       <Navbar />
+      <Background />
 
       {/* ABOUT */}
       <section className="about-section">
