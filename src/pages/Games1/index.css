@@ -19,11 +19,10 @@ body{
 .games-page{
   width:100%;
   min-height:100vh;
-
+  padding-top:115px;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-
   padding-bottom:100px;
 }
 
@@ -184,7 +183,7 @@ body{
 
 .submit-btn{
   padding:18px 70px;
-
+  margin-bottom:50px;
   border:none;
   border-radius:40px;
 

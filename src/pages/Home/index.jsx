@@ -137,12 +137,21 @@ function Home() {
 
         <div className="title-line"></div>
 
-        <p className="funfact-text">
-          Di balik kekayaan budaya Indonesia,
-          terdapat banyak fakta unik dan
-          menarik.
-        </p>
+     <div className="funfact-box">
 
+      <p className="funfact-title">
+        ─ Tahukah Kamu ?
+      </p>
+
+      <p className="funfact-desc">
+
+        Di balik kekayaan budaya Indonesia, terdapat banyak fakta unik
+        dan menarik yang sering terlewatkan. Setiap tradisi menyimpan
+        cerita dan makna yang layak untuk kita kenali lebih dalam.
+
+      </p>
+
+    </div>
         <div className="funfact-container">
           <img src={funfact1} alt="" />
           <img src={funfact2} alt="" />
