@@ -76,7 +76,7 @@ function AboutUs() {
             />
 
             <h3>
-              Nashwa Zahia A.
+              Nashwa Zahia Arkana
             </h3>
 
             <p>
