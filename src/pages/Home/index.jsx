@@ -78,8 +78,8 @@ function Home() {
       {/* ================= FOTO ================= */}
 
       <section className="gallery">
-        <img src={Foto1} alt="" />
-        <img src={Foto2} alt="" />
+        <img src={fotobatik} alt="" />
+        <img src={fotokendang} alt="" />
         <img src={Foto3} alt="" />
       </section>
 
