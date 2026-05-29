@@ -28,7 +28,15 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Background from "../../components/Background";
 
+import { testInsertFeedback } from "../../service/feedback";
+
 function Home() {
+  const [message, setMessage] = React.useState("");
+  const userData = localStorage.getItem("userData"); // string 
+  console.log("Data User yang Login:", userData);
+  const userEmail = userData ? JSON.parse(userData).email : "";
+  console.log("Data user JSON:", JSON.parse(userData));
+  // const navigate = useNavigate();
   return (
     <div
       className="home"
@@ -129,12 +137,21 @@ function Home() {
 
         <div className="title-line"></div>
 
-        <p className="funfact-text">
-          Di balik kekayaan budaya Indonesia,
-          terdapat banyak fakta unik dan
-          menarik.
-        </p>
+     <div className="funfact-box">
 
+      <p className="funfact-title">
+        ─ Tahukah Kamu ?
+      </p>
+
+      <p className="funfact-desc">
+
+        Di balik kekayaan budaya Indonesia, terdapat banyak fakta unik
+        dan menarik yang sering terlewatkan. Setiap tradisi menyimpan
+        cerita dan makna yang layak untuk kita kenali lebih dalam.
+
+      </p>
+
+    </div>
         <div className="funfact-container">
           <img src={funfact1} alt="" />
           <img src={funfact2} alt="" />
@@ -210,10 +227,18 @@ function Home() {
 
         <div className="title-line"></div>
 
-        <textarea placeholder="Ketik pesan..." />
+        <textarea
+          placeholder="Ketik pesan..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
 
-        <button className="send-btn">
+        <button
+          className="send-btn"
+          onClick={() => testInsertFeedback(userEmail, message, setMessage)}
+          >
           Send
+        
         </button>
       </section>
 

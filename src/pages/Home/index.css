@@ -129,20 +129,17 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   box-shadow:
   0 5px 15px rgba(0,0,0,0.08);
 }
 
 .hero-text{
   width:25%;
-
   color:white;
 }
 
 .hero-text h2{
   font-size:26px;
-
   margin-bottom:10px;
 }
 
@@ -164,25 +161,19 @@ body{
 
 .gallery{
   padding:80px 20px;
-
   display:flex;
   justify-content:center;
   gap:20px;
-
   flex-wrap:wrap;
 }
 
 .gallery img{
   width:400px;
-  height:300px;
-
+  /* height:300px; */
   object-fit:cover;
-
   border-radius:15px;
-
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);
-
   transition:0.2s ease;
 }
 
@@ -195,13 +186,10 @@ body{
 .title-line{
   width:160px;
   height:4px;
-
   background:#a46cff;
-
   margin:auto;
   margin-top:-35px;
   margin-bottom:40px;
-
   border-radius:10px;
 }
 
@@ -212,9 +200,7 @@ body{
 .movie-section,
 .feedback-section{
   width:90%;
-
   margin:auto;
-
   padding-bottom:90px;
 }
 
@@ -223,11 +209,8 @@ body{
 .movie-section h2,
 .feedback-section h2{
   text-align:center;
-
   font-size:38px;
-
   color:#9b5dff;
-
   margin-bottom:45px;
 }
 
@@ -237,26 +220,20 @@ body{
   display:flex;
   justify-content:center;
   gap:25px;
-
   flex-wrap:wrap;
 }
 
 .why-card{
   width:300px;
-
   background:white;
-
   padding:25px;
-
   border-radius:18px;
-
   box-shadow:
   0 4px 10px rgba(0,0,0,0.06);
 }
 
 .why-card h3{
   color:#175ac0;
-
   margin-bottom:12px;
 }
 
@@ -267,25 +244,53 @@ body{
 
 /* ================= FUNFACT ================= */
 
-.funfact-text{
-  width:65%;
-
+/* .funfact-text{
+  width:65%
   margin:auto;
-
   text-align:center;
-
   line-height:1.7;
-
   color:#20549e;
-
   margin-bottom:45px;
+} */
+
+.funfact-box{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+.funfact-title{
+
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f46e5;
+  letter-spacing: 1px;
+  text-align: center ;
+
+}
+
+.funfact-desc{
+
+  width: 75%;
+  font-size: 20px;
+  color: #374151;
+  line-height: 2.2;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
+  text-align:center;
+  padding-bottom:50px;
+
 }
 
 .funfact-container{
   display:flex;
   justify-content:center;
   gap:20px;
-
   flex-wrap:wrap;
 }
 
@@ -305,23 +310,17 @@ body{
 
 .movie-container{
   display:grid;
-
   grid-template-columns:
   repeat(auto-fit,minmax(220px,1fr));
-
   gap:20px;
 }
 
 .movie-card{
   background:white;
-
-  padding:20px;
-
-  border-radius:20px;
-
+  padding:12px;
+  border-radius:18px;
   box-shadow:
-  0 15px 20px rgba(0,0,0,0.08);
-
+  0 4px 10px rgba(0,0,0,0.08);
   transition:0.2s ease;
   cursor:pointer;
 }
@@ -332,15 +331,12 @@ body{
 
 .movie-card img{
   width:100%;
-
   border-radius:14px;
 }
 
 .movie-card p{
-  margin-top:20px;
-
+  margin-top:10px;
   text-align:center;
-
   color:#20549e;
 
   font-weight: bold;
@@ -351,26 +347,18 @@ body{
 .feedback-section textarea{
   width:100%;
   height:200px;
-
   border:2px solid #d5bcff;
-
   border-radius:15px;
-
   padding:18px;
-
   resize:none;
-
   outline:none;
 }
 
 .send-btn{
   margin-top:20px;
-
   padding:14px 35px;
-
   border:none;
   border-radius:30px;
-
   background:linear-gradient(
     90deg,
     #4fd6ff,
@@ -378,9 +366,7 @@ body{
   );
 
   color:white;
-
   cursor:pointer;
-
   transition:0.2s ease;
 }
 

@@ -5,11 +5,15 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
+import { useLocation } from "react-router-dom";
+import Background from "../../components/Background";
 
 function Games1() {
+  const location = useLocation();
 
-  const [answers, setAnswers] =
-    useState({});
+  const { data } = location.state || {};
+  const [userAnswers, setUserAnswers] = useState({});
+  const [wrongAnswers, setWrongAnswers] = useState([]);
 
   const questions = [
 
@@ -108,9 +112,9 @@ function Games1() {
     option
   ) => {
 
-    setAnswers({
+    setUserAnswers({
 
-      ...answers,
+      ...userAnswers,
 
       [questionId]: option,
 
@@ -118,23 +122,29 @@ function Games1() {
 
   };
 
+  console.log("Data yang diterima di Games1 dari halaman Tahapan:", data);
   const handleSubmit = () => {
 
-    alert(
-      "Jawaban berhasil dikirim!"
+    console.log("Jawaban yang dipilih:", userAnswers);
+
+    const wrongAnswers = data.filter(
+      (item) => userAnswers[item.id] !== item.answer
     );
+
+    setWrongAnswers(wrongAnswers);
+    console.log("Jawaban yang salah:", wrongAnswers);
+
 
   };
 
+  let optionClass = "option-btn";
+
   return (
 
-    <div
-      className="games-page"
-
-
-    >
+    <div className="games-page">
 
       <Navbar />
+      <Background />
 
       {/* HERO */}
 
@@ -164,7 +174,7 @@ function Games1() {
 
       <section className="question-section">
 
-        {questions.map((item) => (
+        {data?.map((item, index) => (
 
           <div
             className="question-card"
@@ -173,13 +183,13 @@ function Games1() {
 
             <h2>
 
-              {item.id}. {item.question}
+              {index + 1}. {item.question}
 
             </h2>
 
             <div className="option-container">
 
-              {item.options.map(
+              {item.option.map(
                 (option, index) => (
 
                   <button
@@ -187,11 +197,14 @@ function Games1() {
                     key={index}
 
                     className={
-                      answers[item.id] ===
-                        option.type
-
+                      userAnswers[item.id] === option.type // Jika jawaban yg dipilih
                         ? "option-btn active"
-
+                        : wrongAnswers.some(
+                            (wrong) =>
+                              wrong.id === item.id &&
+                              wrong.answer === option.type
+                          )
+                        ? "option-btn wrong"
                         : "option-btn"
                     }
 
@@ -226,10 +239,9 @@ function Games1() {
         <button
           className="submit-btn"
           onClick={handleSubmit}
+
         >
-
           Submit
-
         </button>
 
       </div>

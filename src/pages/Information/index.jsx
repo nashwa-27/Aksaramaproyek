@@ -8,71 +8,45 @@ import Footer from "../../components/Footer";
 
 import bginformation from "../../assets/bginformation.webp";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
+import { getDataTahapan, getGamesByChapterId } from "../../service/tahapan1";
+import { HeroBoxComponent } from "../../components/heroBox";
+import { ChapterList } from "../../components/ChapterList";
+import { ChapterButton } from "../../components/ChapterButton";
 
 function Information() {
 
   const navigate = useNavigate();
+  const [selectedLevel, setSelectedLevel] = useState(1);
+  const [mode, setMode] = useState("materi");
+  // UNTUK MENYIMPAN DATA SEMENTARA
+  const [chapterData, setChapterData] = useState([]);
 
-  const [currentLevel, setCurrentLevel] =
-    useState(1);
+  const isGamesPath = window.location.pathname === "/Games";
 
+  // EKSEKUSI CODE PERTAMA KALI LOAD HALAMAN
   useEffect(() => {
+    const fetchChapterData = async () => {
+      // GET DATA CHAPTER dari Supabase menggunakan fungsi getDataTahapan
+      const chapterData = await getDataTahapan();
+      // Simpan data chapter ke state
+      setChapterData(chapterData);
+    };
 
-    const savedLevel =
-      localStorage.getItem("aksaramaLevel");
-
-    if (savedLevel) {
-
-      setCurrentLevel(
-        parseInt(savedLevel)
-      );
-
-    }
-
+    fetchChapterData();
   }, []);
 
-  const levels = [
+  const handleStart = async() => {
+    if (!isGamesPath) {
+      navigate(`/Tahapan`, {
+        state: {
+          data: chapterData.find((chapter) => chapter.id === selectedLevel),
+        },
 
-    {
-      id: 1,
-      title: "Tahapan 1",
-      desc: "Belajar Gotong Royong",
-    },
-
-    {
-      id: 2,
-      title: "Tahapan 2",
-      desc: "Kenali Flora & Fauna",
-    },
-
-    {
-      id: 3,
-      title: "Tahapan 3",
-      desc: "Eksplor Budaya Indonesia",
-    },
-
-  ];
-
-  
-
-  const handleStart = () => {
-
-    if (currentLevel === 1) {
-
-      navigate("/Tahapan1", { state: { from: 'tahapan 1' } });
-
+      });
     }
-
-    else if (currentLevel === 2) {
-
-      navigate("/Tahapan2");
-
-    }
-
     else {
-
-      navigate("/Tahapan3");
-
+      const gamesData = await getGamesByChapterId(selectedLevel);
+      navigate("/Games1", { state: { data: gamesData } });
     }
 
   };
@@ -89,11 +63,12 @@ function Information() {
     >
 
       <Navbar />
-
       <div className="info-wrapper">
 
         <h2 className="adventure-text">
+
           Lets start your adventure
+
         </h2>
 
         <img
@@ -102,76 +77,15 @@ function Information() {
           className="maskot"
         />
 
-        <div className="hero-box">
+       <HeroBoxComponent />
 
-          <div className="hero-text">
-            Di sesi ini kamu dapat
-            menguji pemahamanmu
-          </div>
+        <ChapterList
+          data={chapterData}
+          onSelectChapter={setSelectedLevel}
+          selectedLevel={selectedLevel}
+        />
 
-          <div className="hero-text right">
-            mulai dari
-            tahapan 1.
-          </div>
-
-        </div>
-
-        <div className="level-container">
-
-          {levels.map((level) => {
-
-            const unlocked =
-              currentLevel >= level.id;
-
-            return (
-
-              <div
-                className="level-row"
-                key={level.id}
-              >
-
-                <div
-                  className={
-                    unlocked
-                      ? "level-icon active"
-                      : "level-icon locked"
-                  }
-                >
-
-                  {unlocked ? "▶" : "🔒"}
-
-                </div>
-
-                <div
-                  className={
-                    unlocked
-                      ? "level-card active-card"
-                      : "level-card"
-                  }
-                >
-
-                  <h3>{level.title}</h3>
-
-                  <p>{level.desc}</p>
-
-                </div>
-
-              </div>
-
-            );
-
-          })}
-
-        </div>
-
-        <button
-          className="start-btn"
-          onClick={handleStart}
-        >
-
-          Mulai Petualanganmu ➜
-
-        </button>
+        <ChapterButton onClick={handleStart} />
 
       </div>
 

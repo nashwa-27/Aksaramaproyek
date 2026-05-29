@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
   margin:0;
-  padding:0;
+  padding-top: 15px;
   box-sizing:border-box;
 
   font-family:'Poppins', sans-serif;
@@ -19,7 +19,47 @@ body{
   background-size:cover;
   background-position:center;
 
-  padding-bottom:80px;
+  /* padding-bottom:80px; */
+  padding-top: 100px;
+}
+
+.mode-wrapper{
+  display:flex;
+  justify-content:center;
+
+  gap:20px;
+
+  padding-top:120px;
+}
+
+.mode-btn{
+  padding:14px 40px;
+
+  border:none;
+  border-radius:30px;
+
+  background:white;
+
+  color:#2563eb;
+
+  font-size:18px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.active-mode{
+
+  background:
+  linear-gradient(
+    90deg,
+    #c084fc,
+    #3b82f6
+  );
+
+  color:white;
 }
 
 .info-wrapper{
@@ -35,7 +75,7 @@ body{
 
   color:#3566c7;
 
-  font-size:28px;
+  font-size:30px;
 
   margin-bottom:20px;
 }
@@ -69,9 +109,6 @@ body{
   align-items:center;
 
   color:white;
-
-  box-shadow:
-  0 8px 20px rgba(0,0,0,0.12);
 }
 
 .hero-text{
@@ -98,6 +135,8 @@ body{
   gap:20px;
 
   margin-bottom:30px;
+
+  cursor:pointer;
 }
 
 .level-icon{
@@ -110,18 +149,18 @@ body{
   justify-content:center;
   align-items:center;
 
+  background:#cbd5e1;
+
   color:white;
 
   font-size:22px;
   font-weight:bold;
+
+  transition:0.2s;
 }
 
 .active{
   background:#2563eb;
-}
-
-.locked{
-  background:#cbd5e1;
 }
 
 .level-card{
@@ -133,12 +172,16 @@ body{
 
   border-radius:18px;
 
-  box-shadow:
-  0 5px 15px rgba(0,0,0,0.08);
+  transition:0.2s;
 }
 
 .active-card{
-  border-left:6px solid #8b5cf6;
+  border-left:8px solid #2563eb;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 8px 20px rgba(37,99,235,0.18);
 }
 
 .level-card h3{
@@ -174,20 +217,4 @@ body{
   font-weight:600;
 
   cursor:pointer;
-}
-
-@media(max-width:900px){
-
-  .hero-box{
-    flex-direction:column;
-
-    text-align:center;
-
-    gap:20px;
-  }
-
-  .hero-text{
-    width:100%;
-  }
-
 }
