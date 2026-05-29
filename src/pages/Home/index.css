@@ -275,8 +275,8 @@ body{
 }
 
 .funfact-desc{
-
-  width: 75%;
+/* 
+  width: 75%; */
   font-size: 20px;
   color: #374151;
   line-height: 2.2;
