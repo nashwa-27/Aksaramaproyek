@@ -10,6 +10,9 @@ import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import Foto1 from "../../assets/Foto1.webp";
 import Foto2 from "../../assets/Foto2.webp";
 import Foto3 from "../../assets/Foto3.webp";
+import fotobatik from "../../assets/fotobatik.jpg";
+import fotokendang from "../../assets/fotokendang.jpg"; 
+
 
 import funfact1 from "../../assets/funfact1.png";
 import funfact2 from "../../assets/funfact2.png";
