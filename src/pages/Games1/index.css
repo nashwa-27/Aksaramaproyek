@@ -75,6 +75,127 @@ body{
   width:190px;
 }
 
+/* ================= SCORE ================= */
+.score-section{
+  width:85%;
+  margin:30px auto;
+}
+
+.score-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,0.08);
+}
+
+.score-card h2{
+  color:#8b5cf6;
+  margin-bottom:10px;
+}
+
+.score-card h1{
+  font-size:60px;
+  color:#2563eb;
+}
+
+
+.score-number{
+
+  font-size:48px;
+
+  color:#2563eb;
+
+  font-weight:700;
+}
+
+.score-divider{
+
+  width:3px;
+
+  height:80px;
+
+  background:#c084fc;
+
+  border-radius:20px;
+}
+
+.score-right{
+
+  flex:1;
+
+  padding-left:30px;
+}
+
+.progress-bar{
+
+  width:100%;
+
+  height:16px;
+
+  background:#ddd6fe;
+
+  border-radius:20px;
+
+  overflow:hidden;
+}
+
+.progress-fill{
+
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  border-radius:20px;
+
+  transition:0.5s;
+}
+
+.progress-text{
+
+  text-align:right;
+
+  margin-top:10px;
+
+  color:#6366f1;
+
+  font-weight:600;
+}
+
+@media(max-width:900px){
+
+  .score-card{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+  }
+
+  .score-divider{
+
+    width:100%;
+
+    height:3px;
+  }
+
+  .score-right{
+
+    width:100%;
+
+    padding-left:0;
+  }
+
+} */
+
 /* ================= QUESTION ================= */
 
 .question-section{

@@ -14,7 +14,7 @@ function Games1() {
   const { data } = location.state || {};
   const [userAnswers, setUserAnswers] = useState({});
   const [wrongAnswers, setWrongAnswers] = useState([]);
-
+  const [score, setScore] = useState(null);
   const questions = [
 
     {
@@ -123,19 +123,28 @@ function Games1() {
   };
 
   console.log("Data yang diterima di Games1 dari halaman Tahapan:", data);
-  const handleSubmit = () => {
+    const handleSubmit = () => {
 
-    console.log("Jawaban yang dipilih:", userAnswers);
+      const wrongAnswers = data.filter(
+        (item) => userAnswers[item.id] !== item.answer
+      );
 
-    const wrongAnswers = data.filter(
-      (item) => userAnswers[item.id] !== item.answer
-    );
+      setWrongAnswers(wrongAnswers);
 
-    setWrongAnswers(wrongAnswers);
-    console.log("Jawaban yang salah:", wrongAnswers);
+      // jumlah soal
+      const totalQuestion = data.length;
 
+      // jumlah benar
+      const correctAnswer =
+        totalQuestion - wrongAnswers.length;
 
-  };
+      // skor
+      const finalScore =
+        (correctAnswer / totalQuestion) * 100;
+
+      setScore(finalScore);
+
+    };
 
   let optionClass = "option-btn";
 
@@ -170,6 +179,59 @@ function Games1() {
 
       </section>
 
+      {/* SCORE */}
+
+      {score !== null && (
+
+        <section className="score-section">
+
+          <div className="score-card">
+
+            <div className="score-left">
+
+              <p className="score-title">
+
+                Skor Kamu
+
+              </p>
+
+              <h1 className="score-number">
+
+                {score}/100
+
+              </h1>
+
+            </div>
+
+            <div className="score-divider"></div>
+
+            <div className="score-right">
+
+              <div className="progress-bar">
+
+                <div
+                  className="progress-fill"
+                  style={{
+                    width: `${score}%`,
+                  }}
+                ></div>
+
+              </div>
+
+              <p className="progress-text">
+
+                {score}%
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      )}
+
       {/* QUESTIONS */}
 
       <section className="question-section">
@@ -200,12 +262,12 @@ function Games1() {
                       userAnswers[item.id] === option.type // Jika jawaban yg dipilih
                         ? "option-btn active"
                         : wrongAnswers.some(
-                            (wrong) =>
-                              wrong.id === item.id &&
-                              wrong.answer === option.type
-                          )
-                        ? "option-btn wrong"
-                        : "option-btn"
+                          (wrong) =>
+                            wrong.id === item.id &&
+                            wrong.answer === option.type
+                        )
+                          ? "option-btn wrong"
+                          : "option-btn"
                     }
 
                     onClick={() =>
@@ -245,6 +307,8 @@ function Games1() {
         </button>
 
       </div>
+
+
 
       <Footer />
 
