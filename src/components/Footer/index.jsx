@@ -1,78 +1,199 @@
-import React from 'react'
-import Profile from "../../assets/profile.png";
-import Instagram from "../../assets/instagram.png";
-import "./index.css";
-import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+// import React from 'react'
+// import Profile from "../../assets/profile.png";
+// import Instagram from "../../assets/instagram.png";
+// import "./index.css";
+// import { Link } from "react-router-dom";
+// import { HashLink } from 'react-router-hash-link';
 
+
+
+// const Footer = () => {
+
+//     return (
+//         <footer className="footer">
+//             <div className="footer-left">
+//                 <h3>Navigation</h3>
+//                 <HashLink to="/#home">
+//                     Home
+//                 </HashLink>
+
+//                 <Link to="/#aboutus">
+//                     About Us
+//                 </Link>
+
+//                 <HashLink smooth to="/#information">
+//                     Information
+//                 </HashLink>
+            
+
+//                 <HashLink smooth to="/#games">
+//                     Games
+//                 </HashLink>
+
+//                 <HashLink to="/#movie">
+//                     Movie
+//                 </HashLink>
+
+//                 <HashLink smooth to="/#feedback">
+//                     Feedback
+//                 </HashLink>
+
+//             </div>
+
+//             <div className="footer-center">
+//                 <img
+//                     src={Profile}
+//                     alt="profile"
+//                     className="profile-img"
+//                 />
+
+//                 <h2>AKSARAMA</h2>
+
+//                 <a
+//                     href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
+//                     target="_blank"
+//                     rel="noreferrer"
+//                 >
+//                     <img
+//                         src={Instagram}
+//                         alt="instagram"
+//                         className="instagram-icon"
+//                     />
+//                 </a>
+//             </div>
+
+//             <div className="footer-right">
+//                 <h3>Get in Touch</h3>
+
+//                 <p>+62 895-4230-12443</p>
+
+//                 <p>
+//                     kelompok6@gmail.com
+//                 </p>
+//             </div>
+
+//         </footer>
+//     );
+// }
+
+// export default Footer
+
+import React from "react";
+import "./index.css";
+
+import Profile from "../../assets/profile.png";
+import AksaramaLogo from "../../assets/aksarama.webp";
+
+import Instagram from "../../assets/instagram.png";
+import Google from "../../assets/google.png";
+
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
+  return (
+    <footer className="footer">
 
-    return (
-        <footer className="footer">
-            <div className="footer-left">
-                <h3>Navigation</h3>
-                <HashLink to="/#home">
-                    Home
-                </HashLink>
+      <div className="footer-container">
 
-                <Link to="/#aboutus">
-                    About Us
-                </Link>
+        {/* LEFT */}
+        <div className="footer-left">
 
-                <HashLink to="/#information">
+            <h3>Navigation</h3>
 
-                    Information
-                </HashLink>
+            <HashLink smooth to="/#home">
+                Home
+            </HashLink>
 
-                <HashLink to="/#games">
-                    Games
-                </HashLink>
+            <HashLink smooth to="/aboutus">
+                About Us
+            </HashLink>
 
-                <HashLink to="/#movie">
-                    Movie
-                </HashLink>
+            <HashLink smooth to="/information">
+                Information
+            </HashLink>
 
-                <HashLink to="/#feedback">
-                    Feedback
-                </HashLink>
+            <HashLink smooth to="/games">
+                Games
+            </HashLink>
 
-            </div>
+            <HashLink smooth to="/#movie">
+                Movie
+            </HashLink>
 
-            <div className="footer-center">
-                <img
-                    src={Profile}
-                    alt="profile"
-                    className="profile-img"
-                />
+            <HashLink smooth to="/#feedback">
+                Feedback
+            </HashLink>
 
-                <h2>AKSARAMA</h2>
+            
 
-                <a
-                    href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img
-                        src={Instagram}
-                        alt="instagram"
-                        className="instagram-icon"
-                    />
-                </a>
-            </div>
+        </div>
 
-            <div className="footer-right">
-                <h3>Get in Touch</h3>
+        {/* CENTER */}
+        <div className="footer-center">
 
-                <p>+62 895-4230-12443</p>
+          <img
+            src={Profile}
+            alt="Maskot"
+            className="profile-img"
+          />
 
-                <p>
-                    kelompok6@gmail.com
-                </p>
-            </div>
+          <img
+            src={AksaramaLogo}
+            alt="Aksarama"
+            className="aksarama-logo"
+          />
 
-        </footer>
-    );
-}
+          <div className="social-icons">
 
-export default Footer
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={Google}
+                alt="Google"
+                className="social-icon"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/aksarama.web"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={Instagram}
+                alt="Instagram"
+                className="social-icon"
+              />
+            </a>
+
+          </div>
+
+
+        </div>
+
+        {/* RIGHT */}
+        <div className="footer-right">
+
+          <h3>Get in Touch</h3>
+
+          <p>
+            +62 895-4230-12443
+          </p>
+
+          <p>
+            rihanavici09@gmail.com
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

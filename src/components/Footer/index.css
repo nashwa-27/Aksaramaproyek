@@ -1,56 +1,156 @@
-
 .footer{
-  background:linear-gradient(
+  margin-top:100px;
+
+  background:
+  linear-gradient(
     180deg,
-    #b58cff,
+    #c79cff,
     #2a82ff
   );
 
-  padding:50px 40px;
+  position:relative;
+}
+
+.footer-container{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
-  gap:30px;
+
   color:white;
 }
 
-.footer-left,
-.footer-center,
-.footer-right{
-  flex:1;
-  min-width:250px;
-}
-
-.footer-center{
-  text-align:center;
-}
-
-.profile-img{
-  width:95px;
-
-  margin-bottom:12px;
-}
-
-.instagram-icon{
-  width:35px;
-
-  margin-top:10px;
-
-  transition:0.2s ease;
-}
-
-.instagram-icon:hover{
-  transform:translateY(-2px);
-}
+/* ================= LEFT ================= */
 
 .footer-left{
+  flex:1;
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:10px;
+  padding-right:50px;
+  border-right:
+  2px solid rgba(255,255,255,0.5);
+}
+
+.footer-left h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
+  padding-top:20px;
+  padding-left:70px;
 }
 
 .footer-left a{
   color:white;
   text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  padding-left:70px;
+}
+
+/* ================= CENTER ================= */
+
+.footer-center{
+  flex:1;
+
+  text-align:center;
+
+  position:relative;
+
+  border-right:
+  2px solid rgba(255,255,255,0.5);
+
+  padding:0 50px;
+}
+
+.profile-img{
+  width:180px;
+
+  position:absolute;
+
+  top:-155px;
+  left:50%;
+
+  transform:
+  translateX(-50%);
+
+  background:white;
+
+  border-radius:50%;
+
+  padding:8px;
+
+  box-shadow:
+  0 4px 15px rgba(0,0,0,0.2);
+}
+
+.aksarama-logo{
+  width:200px;
+
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-bottom:30px;
+}
+
+.social-icon{
+  width:50px;
+  transition:0.3s;
+}
+
+.social-icon:hover{
+  transform:scale(1.1);
+}
+
+
+/* ================= RIGHT ================= */
+
+.footer-right{
+  flex:1;
+  text-align:center;
+}
+
+.footer-right h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:20px;
+  padding-left:50px;
+}
+
+.footer-right p{
+  font-size:15px;
+  margin-bottom:15px;
+  padding-left:50px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .footer-container{
+    flex-direction:column;
+
+    gap:40px;
+  }
+
+  .footer-left,
+  .footer-center{
+    border-right:none;
+  }
+
+  .profile-img{
+    position:static;
+
+    transform:none;
+
+    margin-bottom:20px;
+  }
+
+  .footer-center{
+    padding:0;
+  }
 }
