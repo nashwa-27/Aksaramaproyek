@@ -1,5 +1,5 @@
 .footer{
-  margin-top:100px;
+  margin-top:60px;
 
   background:
   linear-gradient(
@@ -8,11 +8,18 @@
     #2a82ff
   );
 
-  position:relative;
+  padding:35px 40px;
+
+  overflow:visible;
 }
 
 .footer-container{
+  max-width:1200px;
+
+  margin:auto;
+
   display:flex;
+
   justify-content:space-between;
   align-items:center;
 
@@ -23,28 +30,40 @@
 
 .footer-left{
   flex:1;
+
   display:flex;
   flex-direction:column;
+
   gap:10px;
-  padding-right:50px;
+
+  min-height:180px;
+
   border-right:
-  2px solid rgba(255,255,255,0.5);
+  1.5px solid rgba(255,255,255,.4);
+
+  padding-right:30px;
 }
 
 .footer-left h3{
-  font-size:20px;
-  font-weight:700;
-  margin-bottom:10px;
-  padding-top:20px;
-  padding-left:70px;
+  font-size:18px;
+
+  margin-bottom:12px;
 }
 
 .footer-left a{
   color:white;
+
   text-decoration:none;
+
   font-size:15px;
-  font-weight:500;
-  padding-left:70px;
+
+  transition:.25s;
+}
+
+.footer-left a:hover{
+  transform:translateX(4px);
+
+  opacity:.85;
 }
 
 /* ================= CENTER ================= */
@@ -56,101 +75,153 @@
 
   position:relative;
 
-  border-right:
-  2px solid rgba(255,255,255,0.5);
+  min-height:180px;
 
-  padding:0 50px;
+  border-right:
+  1.5px solid rgba(255,255,255,.4);
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+
+  padding:0 30px;
 }
 
 .profile-img{
-  width:180px;
+  width:70px;
 
   position:absolute;
 
-  top:-155px;
+  top:-70px;
   left:50%;
 
-  transform:
-  translateX(-50%);
+  transform:translateX(-50%);
 
   background:white;
 
   border-radius:50%;
 
-  padding:8px;
+  padding:4px;
 
   box-shadow:
-  0 4px 15px rgba(0,0,0,0.2);
+  0 3px 10px rgba(0,0,0,.15);
 }
 
 .aksarama-logo{
-  width:200px;
+  width:180px;
 
   margin-top:20px;
-  margin-bottom:30px;
-}
-
-.social-icons{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-bottom:30px;
+  margin-bottom:18px;
 }
 
 .social-icon{
-  width:50px;
-  transition:0.3s;
+  width:38px;
+
+  margin-bottom:25px;
+
+  transition:.3s;
 }
 
 .social-icon:hover{
-  transform:scale(1.1);
+  transform:scale(1.08);
 }
 
+.footer-menu{
+  display:flex;
+
+  gap:30px;
+}
+
+.footer-menu a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  transition:.25s;
+}
+
+.footer-menu a:hover{
+  transform:translateY(-3px);
+
+  opacity:.85;
+}
 
 /* ================= RIGHT ================= */
 
 .footer-right{
   flex:1;
+  margin-left:30px;
   text-align:center;
+  min-height:180px;
 }
 
 .footer-right h3{
-  font-size:20px;
-  font-weight:700;
+  font-size:18px;
+
   margin-bottom:20px;
-  padding-left:50px;
 }
 
 .footer-right p{
   font-size:15px;
-  margin-bottom:15px;
-  padding-left:50px;
+
+  margin-bottom:12px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-  .footer-container{
-    flex-direction:column;
-
-    gap:40px;
+  .footer{
+    padding:30px 15px;
   }
 
-  .footer-left,
-  .footer-center{
-    border-right:none;
+  .footer-container{
+    gap:10px;
   }
 
   .profile-img{
-    position:static;
+    width:50px;
 
-    transform:none;
-
-    margin-bottom:20px;
+    top:-50px;
   }
 
-  .footer-center{
-    padding:0;
+  .aksarama-logo{
+    width:95px;
+  }
+
+  .footer-menu{
+    gap:10px;
+
+    flex-wrap:wrap;
+  }
+
+  .footer-menu a{
+    font-size:10px;
+  }
+
+  .footer-left h3,
+  .footer-right h3{
+    font-size:11px;
+  }
+
+  .footer-left a,
+  .footer-right p{
+    font-size:9px;
+  }
+
+  .social-icon{
+    width:20px;
+    margin-bottom:12px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right{
+    min-height:120px;
   }
 }

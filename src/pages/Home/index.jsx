@@ -1,22 +1,20 @@
 import React from "react";
 import "./index.css";
-
 import { Link } from "react-router-dom";
 
 // import Aksarama from "../../assets/Aksarama.webp";
 // import bgkosong from "../../assets/bgkosong.png";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 
-import Foto1 from "../../assets/Foto1.webp";
-import Foto2 from "../../assets/Foto2.webp";
 import Foto3 from "../../assets/Foto3.webp";
 import fotobatik from "../../assets/fotobatik.jpg";
 import fotokendang from "../../assets/fotokendang.jpg"; 
+import fotosmp from "../../assets/fotosmp.jpg";
 
-
-import funfact1 from "../../assets/funfact1.png";
-import funfact2 from "../../assets/funfact2.png";
-import funfact3 from "../../assets/funfact3.png";
+import FunFact1 from "../../assets/FunFact1.jpg";
+import FunFact2 from "../../assets/FunFact2.jpg";
+import FunFact3 from "../../assets/FunFact3.jpg";
+import FunFact4 from "../../assets/FunFact4.jpg";
 
 import movie1 from "../../assets/movie1.png";
 import movie2 from "../../assets/movie2.png";
@@ -93,7 +91,7 @@ function Home() {
       <section className="gallery">
         <img src={fotobatik} alt="" />
         <img src={fotokendang} alt="" />
-        <img src={Foto3} alt="" />
+        <img src={fotosmp} alt="" />
       </section>
 
       {/* ================= WHY ================= */}
@@ -156,9 +154,10 @@ function Home() {
 
     </div>
         <div className="funfact-container">
-          <img src={funfact1} alt="" />
-          <img src={funfact2} alt="" />
-          <img src={funfact3} alt="" />
+          <img src={FunFact1} alt="" />
+          <img src={FunFact2} alt="" />
+          <img src={FunFact3} alt="" />
+          <img src={FunFact4} alt="" />
         </div>
       </section>
 

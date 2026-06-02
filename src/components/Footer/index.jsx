@@ -1,83 +1,123 @@
-// import React from 'react'
-// import Profile from "../../assets/profile.png";
-// import Instagram from "../../assets/instagram.png";
+// import React from "react";
 // import "./index.css";
+
+// import Profile from "../../assets/profile.png";
+// import AksaramaLogo from "../../assets/aksarama.webp";
+
+// import Instagram from "../../assets/instagram.png";
+// import Google from "../../assets/google.png";
+
 // import { Link } from "react-router-dom";
-// import { HashLink } from 'react-router-hash-link';
-
-
+// import { HashLink } from "react-router-hash-link";
 
 // const Footer = () => {
+//   return (
+//     <footer className="footer">
 
-//     return (
-//         <footer className="footer">
-//             <div className="footer-left">
-//                 <h3>Navigation</h3>
-//                 <HashLink to="/#home">
-//                     Home
-//                 </HashLink>
+//       <div className="footer-container">
 
-//                 <Link to="/#aboutus">
-//                     About Us
-//                 </Link>
+//         {/* LEFT */}
+//         <div className="footer-left">
 
-//                 <HashLink smooth to="/#information">
-//                     Information
-//                 </HashLink>
-            
+//           <h3>Navigation</h3>
 
-//                 <HashLink smooth to="/#games">
-//                     Games
-//                 </HashLink>
+//           <HashLink smooth to="/#home">
+//             Home
+//           </HashLink>
 
-//                 <HashLink to="/#movie">
-//                     Movie
-//                 </HashLink>
+//           <Link to="/Aboutus">
+//             About Us
+//           </Link>
 
-//                 <HashLink smooth to="/#feedback">
-//                     Feedback
-//                 </HashLink>
+//           <Link to="/Information">
+//             Information
+//           </Link>
 
-//             </div>
+//           <Link to="/Games">
+//             Games
+//           </Link>
 
-//             <div className="footer-center">
-//                 <img
-//                     src={Profile}
-//                     alt="profile"
-//                     className="profile-img"
-//                 />
+//           <HashLink smooth to="/#movie">
+//             Movie
+//           </HashLink>
 
-//                 <h2>AKSARAMA</h2>
+//           <HashLink smooth to="/#feedback">
+//             Feedback
+//           </HashLink>
 
-//                 <a
-//                     href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
-//                     target="_blank"
-//                     rel="noreferrer"
-//                 >
-//                     <img
-//                         src={Instagram}
-//                         alt="instagram"
-//                         className="instagram-icon"
-//                     />
-//                 </a>
-//             </div>
+//         </div>
 
-//             <div className="footer-right">
-//                 <h3>Get in Touch</h3>
+//         {/* CENTER */}
+//         <div className="footer-center">
 
-//                 <p>+62 895-4230-12443</p>
+//           <img
+//             src={Profile}
+//             alt="Maskot Aksarama"
+//             className="profile-img"
+//           />
 
-//                 <p>
-//                     kelompok6@gmail.com
-//                 </p>
-//             </div>
+//           <img
+//             src={AksaramaLogo}
+//             alt="Aksarama"
+//             className="aksarama-logo"
+//           />
 
-//         </footer>
-//     );
-// }
+//           <p className="footer-tagline">
+//             Explore Indonesian Culture Through Digital Learning
+//           </p>
 
-// export default Footer
+//           <div className="social-icons">
 
+//             <a
+//               href="https://google.com"
+//               target="_blank"
+//               rel="noreferrer"
+//             >
+//               <img
+//                 src={Google}
+//                 alt="Google"
+//                 className="social-icon"
+//               />
+//             </a>
+
+//             <a
+//               href="https://www.instagram.com/aksarama.web"
+//               target="_blank"
+//               rel="noreferrer"
+//             >
+//               <img
+//                 src={Instagram}
+//                 alt="Instagram"
+//                 className="social-icon"
+//               />
+//             </a>
+
+//           </div>
+
+//         </div>
+
+//         {/* RIGHT */}
+//         <div className="footer-right">
+
+//           <h3>Get In Touch</h3>
+
+//           <p>
+//             +62 895-4230-12443
+//           </p>
+
+//           <p>
+//             rihanavici09@gmail.com
+//           </p>
+
+//         </div>
+
+//       </div>
+
+//     </footer>
+//   );
+// };
+
+// export default Footer;
 import React from "react";
 import "./index.css";
 
@@ -85,7 +125,6 @@ import Profile from "../../assets/profile.png";
 import AksaramaLogo from "../../assets/aksarama.webp";
 
 import Instagram from "../../assets/instagram.png";
-import Google from "../../assets/google.png";
 
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -99,33 +138,25 @@ const Footer = () => {
         {/* LEFT */}
         <div className="footer-left">
 
-            <h3>Navigation</h3>
+          <h3>Navigation</h3>
 
-            <HashLink smooth to="/#home">
-                Home
-            </HashLink>
+          <Link to="/Aboutus">About Us</Link>
 
-            <HashLink smooth to="/aboutus">
-                About Us
-            </HashLink>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
 
-            <HashLink smooth to="/information">
-                Information
-            </HashLink>
+          <Link to="/Information">
+            Information
+          </Link>
 
-            <HashLink smooth to="/games">
-                Games
-            </HashLink>
+          <HashLink smooth to="/#movie">
+            Movie
+          </HashLink>
 
-            <HashLink smooth to="/#movie">
-                Movie
-            </HashLink>
-
-            <HashLink smooth to="/#feedback">
-                Feedback
-            </HashLink>
-
-            
+          <HashLink smooth to="/#feedback">
+            Feedback
+          </HashLink>
 
         </div>
 
@@ -144,48 +175,31 @@ const Footer = () => {
             className="aksarama-logo"
           />
 
-          <div className="social-icons">
-
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={Google}
-                alt="Google"
-                className="social-icon"
-              />
-            </a>
-
-            <a
-              href="https://www.instagram.com/aksarama.web"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={Instagram}
-                alt="Instagram"
-                className="social-icon"
-              />
-            </a>
-
-          </div>
-
+          <a
+            href="https://www.instagram.com/aksarama.web"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={Instagram}
+              alt="Instagram"
+              className="social-icon"
+            />
+          </a>
 
         </div>
 
         {/* RIGHT */}
         <div className="footer-right">
 
-          <h3>Get in Touch</h3>
+          <h3>Get In Touch</h3>
 
           <p>
             +62 895-4230-12443
           </p>
 
           <p>
-            rihanavici09@gmail.com
+            kelompok6@gmail.com
           </p>
 
         </div>
