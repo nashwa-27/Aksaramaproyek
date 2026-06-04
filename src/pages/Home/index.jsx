@@ -81,9 +81,21 @@ function Home() {
           </div>
         </div>
 
-        <button className="start-btn">
+            <div className="start-section">
+
+        <h3 className="start-title">
           Get Started
-        </button>
+        </h3>
+
+        <div className="start-line"></div>
+
+        <p className="start-desc">
+          Mari menjelajahi budaya Indonesia
+          melalui materi interaktif, fakta unik,
+          dan tantangan seru di setiap level.
+        </p>
+
+      </div>
       </section>
 
       {/* ================= FOTO ================= */}

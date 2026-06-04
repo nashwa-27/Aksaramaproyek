@@ -49,6 +49,40 @@ body{
   text-align: center;
 }
 
+/* ================= START SECTION ================= */
+
+
+.start-section{
+  margin-top:40px;
+  text-align:center;
+}
+
+.start-title{
+  color:#7c3aed;
+  font-size:30px;
+  text-align:center;
+}
+
+.start-line{
+  width:150px;
+  height:3px;
+
+  background:#a46cff;
+
+  margin:10px auto 20px;
+  border-radius:20px;
+}
+
+.start-desc{
+  max-width:550px;
+  margin:auto;
+
+  color:#4b5563;
+  line-height:1.8;
+
+  text-align:center;
+}
+
 /* ================= GALLERY ================= */
 
 .gallery{
@@ -305,15 +339,62 @@ body{
 
   .funfact-container{
     gap:10px;
-     display:flex;
+    display:flex;
     justify-content:center;
+    overflow-x: auto;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    scroll-snap-type: x mandatory;
   }
 
   .funfact-container img{
-    width:22%;
-    min-width:80px;
+    min-width:80%;
+    scroll-snap-align: center;
     /* display:flex;
     justify-content:center; */
+  }
+
+  .gallery{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+
+    scroll-snap-type:x mandatory;
+
+    padding:30px 20px;
+
+    justify-content:flex-start;
+  }
+
+  .gallery::-webkit-scrollbar{
+    display:none;
+  }
+
+  .gallery img{
+    min-width:85%;
+
+    scroll-snap-align:center;
+  }
+
+  .movie-container{
+
+    display:flex;
+
+    overflow-x:auto;
+
+    gap:15px;
+
+    scroll-snap-type:x mandatory;
+  }
+
+  .movie-container::-webkit-scrollbar{
+    display:none;
+  }
+
+  .movie-card{
+
+    min-width:260px;
+
+    scroll-snap-align:center;
   }
 
 }
