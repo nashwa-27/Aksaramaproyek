@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import profile from "../../assets/profile.png";
 import bgLogin from "../../assets/bgLogin.webp";
 import { onSignIn } from "../../service/auth";
+import Navbar from "../../components/Navbar";
+
 
 function Login() {
 
@@ -14,6 +16,7 @@ function Login() {
   const [password, setPassword] = React.useState("");
   return (
 
+     
     <div
       className="container"
 
@@ -21,7 +24,7 @@ function Login() {
         backgroundImage: `url(${bgLogin})`,
       }}
     >
-
+      <Navbar />
       <div className="card">
 
 

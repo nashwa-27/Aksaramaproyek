@@ -298,15 +298,28 @@ body{
 
   .hero-box{
     width:90%;
+    max-width: 1000px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    /* flex-direction:column;
+    gap:20px; */
+     justify-content:space-between;
+    background:
+    linear-gradient(
+      90deg,
+      #c084fc,
+      #3b82f6
+    );
 
-    flex-direction:column;
-
-    gap:20px;
-  }
+    border-radius:25px;
+    padding:40px 35px;
+    overflow:hidden; /* penting */
+    }
 
   .hero-text{
-    width:100%;
-    text-align:left;
+    width:35%;
+    /* text-align:left; */
     font-size: 5px;
   }
 
@@ -315,7 +328,10 @@ body{
   }
 
   .maskot{
-    width:210px;
+    width:250px;
+    height:auto;
+    flex-shrink:0;
+    margin:0 20px;
   }
 
   .hero h1{
@@ -326,6 +342,40 @@ body{
   /* ================= FUNFACT MOBILE ================= */
 
 @media(max-width:768px){
+
+  .hero-box{
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px 25px;
+
+    gap:15px;
+  }
+
+  .hero-text{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-text h2{
+    font-size:28px;
+  }
+
+  .hero-text p{
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  .maskot{
+    width:160px;
+    margin:10px auto;
+  }
+
+  .right{
+    text-align:center;
+  }
+
 
   .funfact-title{
     font-size:22px;
