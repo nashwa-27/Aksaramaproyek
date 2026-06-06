@@ -212,3 +212,47 @@ body{
   font-weight:600;
   cursor:pointer;
 }
+
+@media (max-width: 768px){
+
+  .info-container{
+    padding-top:80px;
+  }
+
+  .info-wrapper{
+    width:95%;
+    padding-top:10px;
+  }
+
+  .adventure-text{
+    font-size:20px;
+    margin-bottom:10px;
+  }
+
+  .maskot{
+    width:100px;
+    margin-bottom:-15px;
+    position:relative;
+    z-index:2;
+  }
+
+  @media (max-width:768px){
+
+  .hero-box{
+    width:90%;
+    padding:15px;
+    min-height:140px;
+  }
+
+  .hero-box h2{
+    font-size:18px;
+  }
+
+  .hero-box p{
+    font-size:14px;
+    line-height:1.5;
+  }
+
+}
+
+}
