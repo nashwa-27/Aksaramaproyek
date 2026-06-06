@@ -339,43 +339,43 @@ body{
   }
 }
 
-  /* ================= FUNFACT MOBILE ================= */
+  /* =================  MOBILE ================= */
 
 @media(max-width:768px){
 
   .hero-box{
     flex-direction:column;
-
-    text-align:center;
-
-    padding:30px 25px;
-
-    gap:15px;
+    align-items:center;
+    padding:35px 25px;
+    gap:20px;
+    position:relative;
   }
 
-  .hero-text{
+   .maskot{
+    position:static;
+    transform:none;
+    width:170px;
+    /* margin:10px auto; */
+    order:1;
+  }
+
+  .hero-text:first-child{
+    order:2;
+
     width:100%;
+
     text-align:center;
   }
 
-  .hero-text h2{
-    font-size:28px;
-  }
+  .hero-text.right{
+    order:3;
 
-  .hero-text p{
-    font-size:16px;
-    line-height:1.8;
-  }
+    width:100%;
 
-  .maskot{
-    width:160px;
-    margin:10px auto;
-  }
-
-  .right{
     text-align:center;
   }
 
+/* funfact */
 
   .funfact-title{
     font-size:22px;
