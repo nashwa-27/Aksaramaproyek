@@ -9,7 +9,7 @@ import Footer from "../../components/Footer";
 import bginformation from "../../assets/bginformation.webp";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import { getDataTahapan, getGamesByChapterId } from "../../service/tahapan1";
-import { HeroBoxComponent } from "../../components/HeroBox";
+import HeroBoxComponent from "../../components/HeroBox";
 import { ChapterList } from "../../components/ChapterList";
 import { ChapterButton } from "../../components/ChapterButton";
 
@@ -71,11 +71,11 @@ function Information() {
 
         </h2>
 
-        <img
+        {/* <img
           src={MaskotAksarama}
           alt=""
           className="maskot"
-        />
+        /> */}
 
        <HeroBoxComponent />
 

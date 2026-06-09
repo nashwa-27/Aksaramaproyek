@@ -103,9 +103,7 @@ body{
 
 .materi-card p{
   color:#1e293b;
-
-  font-size:20px;
-
+  font-size:15px;
   line-height:1.9;
 }
 
@@ -121,7 +119,7 @@ body{
 }
 
 .next-btn{
-  padding:18px 45px;
+  padding:12px 19px;
   margin-bottom:50px;
   border:none;
   border-radius:35px;
@@ -135,14 +133,14 @@ body{
 
   color:white;
 
-  font-size:20px;
+  font-size:15px;
   font-weight:600;
 
   cursor:pointer;
 }
 
 .game-btn{
-  padding:18px 45px;
+  padding:12px 19px;
   margin-bottom:50px;
   border:none;
   border-radius:35px;
@@ -156,7 +154,7 @@ body{
 
   color:white;
 
-  font-size:20px;
+  font-size:15px;
   font-weight:600;
 
   cursor:pointer;
@@ -208,5 +206,25 @@ body{
 
     align-items:center;
   }
+  .next-btn{
+  padding:12px 19px;
+  margin-bottom:0px;
+  border:none;
+  border-radius:35px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #c084fc,
+    #7c3aed
+  );
+
+  color:white;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+}
 
 }
