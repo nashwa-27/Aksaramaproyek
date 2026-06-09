@@ -48,7 +48,7 @@ body{
 
 .about-box{
   width:70%;
-
+  margin:50px;
   background:#caa7ff;
 
   padding:35px;
@@ -160,7 +160,6 @@ body{
 
   .about-box{
     width:100%;
-
     font-size:17px;
   }
 
