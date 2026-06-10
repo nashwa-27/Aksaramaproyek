@@ -121,9 +121,9 @@ body{
 
 /* ================= SECTION ================= */
 
-/* .why-section,
+.why-section,
 .funfact-section,
-.movie-section, */
+.movie-section,
 .feedback-section{
   width:90%;
   margin:auto;
@@ -138,6 +138,7 @@ body{
   font-size:38px;
   color:#9b5dff;
   margin-bottom:45px;
+  margin-top:45px;
 }
 
 /* ================= WHY ================= */
@@ -277,11 +278,13 @@ body{
   padding:14px 35px;
   border:none;
   border-radius:30px;
+  border:3px solid white;
   background:linear-gradient(
     90deg,
-    #4fd6ff,
-    #4964ff
+    #b56cff,
+    #4d7dff
   );
+
 
   color:white;
   cursor:pointer;

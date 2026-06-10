@@ -37,10 +37,8 @@ body{
 }
 
 .hero-box{
-  width:85%;
-
+  width:65%;
   margin:auto;
-
   background:
   linear-gradient(
     90deg,
