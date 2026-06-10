@@ -90,9 +90,10 @@ function Home() {
         <div className="start-line"></div>
 
         <p className="start-desc">
-          Mari menjelajahi budaya Indonesia
-          melalui materi interaktif, fakta unik,
-          dan tantangan seru di setiap level.
+          Aksarama mengajak pelajar SMP untuk mengenal budaya Indonesia. Melalui materi tentang desain batik, peserta didik dapat mempelajari keindahan serta makna di balik motif-motif tradisional, sementara pembelajaran alat musik daerah membantu mengenal kekayaan seni Nusantara.
+          {/* Seluruh materi dirancang khusus agar generasi muda dapat memahami, menghargai,
+          dan melestarikan budaya Indonesia dengan lebih mudah dan menyenangkan. */}
+
         </p>
 
       </div>

@@ -43,11 +43,11 @@ const Footer = () => {
         {/* CENTER */}
         <div className="footer-center">
 
-          <img
+          {/* <img
             src={Profile}
             alt="Maskot"
             className="profile-img"
-          />
+          /> */}
 
           <img
             src={AksaramaLogo}
