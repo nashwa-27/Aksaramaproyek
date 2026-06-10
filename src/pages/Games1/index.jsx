@@ -165,7 +165,7 @@ function Games1() {
 
             Di sesi ini kamu dapat
             menguji pemahamanmu
-            mulai dari tahapan 1.
+            mulai dari tahapan {data[0]?.chapter_id}.
 
           </div>
 
