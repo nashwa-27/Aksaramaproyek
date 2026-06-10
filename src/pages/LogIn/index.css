@@ -30,23 +30,25 @@ body{
 /* ================= CARD ================= */
 
 .card{
+ 
   width:420px;
 
-  background:
-  rgba(255,255,255,0.2);
-
-  border:
-  1px solid rgba(255,255,255,0.25);
+  background:rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.25);
 
   border-radius:24px;
-
   padding:40px 35px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 
   text-align:center;
 
   box-shadow:
   0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 /* ================= PROFILE ================= */
 
