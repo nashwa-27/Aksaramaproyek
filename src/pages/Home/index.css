@@ -209,11 +209,17 @@ body{
   padding-bottom:50px;
 }
  .funfact-container{
-    display:flex;
-    justify-content:center;
-  }
+    /* display:flex;
+    justify-content:center; */
+    width: 85%;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px; 
+}
 .funfact-container img{
-  width:240px;
+  width:220px;
   border-radius:18px;
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);
