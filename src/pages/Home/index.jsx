@@ -11,10 +11,10 @@ import fotobatik from "../../assets/fotobatik.jpg";
 import fotokendang from "../../assets/fotokendang.jpg"; 
 import fotosmp from "../../assets/fotosmp.jpg";
 
-import FunFact1 from "../../assets/FunFact1.jpg";
-import FunFact2 from "../../assets/FunFact2.jpg";
-import FunFact3 from "../../assets/FunFact3.jpg";
-import FunFact4 from "../../assets/FunFact4.jpg";
+import funfact1 from "../../assets/funfact1.jpg";
+import funfact2 from "../../assets/funfact2.jpg";
+import funfact3 from "../../assets/funfact3.jpg";
+import funfact4 from "../../assets/funfact4.jpg";
 
 import movie1 from "../../assets/movie1.png";
 import movie2 from "../../assets/movie2.png";
@@ -167,10 +167,10 @@ function Home() {
 
     </div>
         <div className="funfact-container">
-          <img src={FunFact1} alt="" />
-          <img src={FunFact2} alt="" />
-          <img src={FunFact3} alt="" />
-          <img src={FunFact4} alt="" />
+          <img src={funfact1} alt="" />
+          <img src={funfact2} alt="" />
+          <img src={funfact3} alt="" />
+          <img src={funfact4} alt="" />
         </div>
       </section>
 

@@ -321,6 +321,19 @@ body{
   box-shadow:
   0 10px 20px rgba(79,70,229,0.25);
 }
+.submit-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(59,130,246,.35);
+}
+
+.submit-btn:active{
+  transform:scale(.96);
+
+  box-shadow:
+    0 4px 10px rgba(59,130,246,.2);
+}
 
 /* ================= RESPONSIVE ================= */
 

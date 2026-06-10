@@ -292,8 +292,19 @@ body{
 }
 
 .send-btn:hover{
-  transform:translateY(-2px);
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(59,130,246,.35);
 }
+
+.send-btn:active{
+  transform:scale(.96);
+
+  box-shadow:
+    0 4px 10px rgba(59,130,246,.2);
+}
+
 
 /* ================= RESPONSIVE ================= */
 
@@ -399,7 +410,9 @@ body{
   }
 
   .funfact-container{
-    gap:10px;
+    width:85%;
+    margin:20px auto 0;
+    gap:20px;
     display:flex;
     justify-content:center;
     overflow-x: auto;

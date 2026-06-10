@@ -138,6 +138,19 @@ body{
 
   cursor:pointer;
 }
+.next-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(59,130,246,.35);
+}
+
+.next-btn:active{
+  transform:scale(.96);
+
+  box-shadow:
+    0 4px 10px rgba(59,130,246,.2);
+}
 
 .game-btn{
   padding:12px 19px;
@@ -160,11 +173,18 @@ body{
   cursor:pointer;
 }
 
-.next-btn:hover,
 .game-btn:hover{
-  transform:translateY(-3px);
-  margin-bottom:50px;
-  transition:0.2s;
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(59,130,246,.35);
+}
+
+.game-btn:active{
+  transform:scale(.96);
+
+  box-shadow:
+    0 4px 10px rgba(59,130,246,.2);
 }
 
 /* RESPONSIVE */
