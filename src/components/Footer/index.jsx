@@ -1,78 +1,93 @@
-import React from 'react'
-import Profile from "../../assets/profile.png";
-import Instagram from "../../assets/instagram.png";
+import React from "react";
 import "./index.css";
-import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 
+import Profile from "../../assets/profile.png";
+import AksaramaLogo from "../../assets/AksaramaPutih.png";
+
+import Instagram from "../../assets/instagram.png";
+
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
+  return (
+    <footer className="footer">
 
-    return (
-        <footer className="footer">
-            <div className="footer-left">
-                <h3>Navigation</h3>
-                <HashLink to="/#home">
-                    Home
-                </HashLink>
+      <div className="footer-container">
 
-                <Link to="/#aboutus">
-                    About Us
-                </Link>
+        {/* LEFT */}
+        <div className="footer-left">
 
-                <HashLink to="/#information">
+          <h3>Navigation</h3>
 
-                    Information
-                </HashLink>
+          <Link to="/Aboutus">About Us</Link>
 
-                <HashLink to="/#games">
-                    Games
-                </HashLink>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
 
-                <HashLink to="/#movie">
-                    Movie
-                </HashLink>
+          <Link to="/Information">
+            Information
+          </Link>
 
-                <HashLink to="/#feedback">
-                    Feedback
-                </HashLink>
+          <HashLink smooth to="/#movie">
+            Movie
+          </HashLink>
 
-            </div>
+          <HashLink smooth to="/#feedback">
+            Feedback
+          </HashLink>
 
-            <div className="footer-center">
-                <img
-                    src={Profile}
-                    alt="profile"
-                    className="profile-img"
-                />
+        </div>
 
-                <h2>AKSARAMA</h2>
+        {/* CENTER */}
+        <div className="footer-center">
 
-                <a
-                    href="https://www.instagram.com/aksarama.web?igsh=MTRldTZrbHN3cHV2ZA=="
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img
-                        src={Instagram}
-                        alt="instagram"
-                        className="instagram-icon"
-                    />
-                </a>
-            </div>
+          {/* <img
+            src={Profile}
+            alt="Maskot"
+            className="profile-img"
+          /> */}
 
-            <div className="footer-right">
-                <h3>Get in Touch</h3>
+          <img
+            src={AksaramaLogo}
+            alt="AksaramaPutih"
+            className="aksarama-logo"
+          />
 
-                <p>+62 895-4230-12443</p>
+          <a
+            href="https://www.instagram.com/aksarama.web"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={Instagram}
+              alt="Instagram"
+              className="social-icon"
+            />
+          </a>
 
-                <p>
-                    kelompok6@gmail.com
-                </p>
-            </div>
+        </div>
 
-        </footer>
-    );
-}
+        {/* RIGHT */}
+        <div className="footer-right">
 
-export default Footer
+          <h3>Get In Touch</h3>
+
+          <p>
+            +62 895-4230-12443
+          </p>
+
+          <p>
+            kelompok6@gmail.com
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

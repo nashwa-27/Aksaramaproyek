@@ -86,7 +86,7 @@ function SignUp() {
           onClick={() => onSignUp(firstName, lastName, email, password, navigate)}
         >
 
-          Sign Up
+          Submit
 
         </button>
 

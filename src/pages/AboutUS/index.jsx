@@ -4,7 +4,7 @@ import "./index.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-
+import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import zaza from "../../assets/zaza.png";
 import abel from "../../assets/abel.webp";
 import vici from "../../assets/vici.png";
@@ -29,7 +29,7 @@ function AboutUs() {
         </h1>
 
         <div className="about-box top-box">
-
+          <h3>🌟 Inspirasi Aksarama</h3>
           <p>
             Kami membuat Website Aksarama
             karena terinspirasi dari salah
@@ -42,7 +42,19 @@ function AboutUs() {
 
         </div>
 
+        <div className="about-middle">
+
+  {/* <img
+    src={MaskotAksarama}
+    alt=""
+    className="about-maskot"
+  /> */}
+
+</div> 
+
         <div className="about-box bottom-box">
+            <h3>🎯 Tujuan Aksarama</h3>
+
 
           <p>
             Website Aksarama dibuat dengan
@@ -66,6 +78,10 @@ function AboutUs() {
 
         <div className="line"></div>
 
+        
+        {/* <div className="divider">
+  ✨ 🌸 ⭐ 🌸 ✨
+</div> */}
         <div className="team-container">
 
           <div className="team-card">
@@ -93,7 +109,7 @@ function AboutUs() {
             />
 
             <h3>
-              Anabella Earline A.
+              Anabella Earline Andiwa
             </h3>
 
             <p>
@@ -110,7 +126,7 @@ function AboutUs() {
             />
 
             <h3>
-              Rihana Vici N.
+              Rihana Vici Nurrofina
             </h3>
 
             <p>
@@ -127,7 +143,7 @@ function AboutUs() {
             />
 
             <h3>
-              Giza Aura W.
+              Giza Aura Widyandhari
             </h3>
 
             <p>
@@ -144,7 +160,7 @@ function AboutUs() {
             />
 
             <h3>
-              Marella Maden M.
+              Marella Maden Maharani
             </h3>
 
             <p>
