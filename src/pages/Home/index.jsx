@@ -14,7 +14,7 @@ import fotosmp from "../../assets/fotosmp.jpg";
 import funfact1 from "../../assets/funfact1.jpg";
 import funfact2 from "../../assets/funfact2.jpg";
 import funfact3 from "../../assets/funfact3.jpg";
-import funfact4 from "../../assets/funfact4.png";
+// import funfact4 from "../../assets/funfact4.png";
 import movie1 from "../../assets/movie1.png";
 import movie2 from "../../assets/movie2.png";
 import movie3 from "../../assets/movie3.png";
@@ -35,7 +35,11 @@ function Home() {
   const userData = localStorage.getItem("userData"); // string 
   console.log("Data User yang Login:", userData);
   const userEmail = userData ? JSON.parse(userData).email : "";
-  console.log("Data user JSON:", JSON.parse(userData));
+  // console.log("Data user JSON:", JSON.parse(userData));
+  console.log(
+  "Data user JSON:",
+  userData ? JSON.parse(userData) : null
+);
   // const navigate = useNavigate();
   return (
     <div
@@ -169,7 +173,7 @@ function Home() {
           <img src={funfact1} alt="" />
           <img src={funfact2} alt="" />
           <img src={funfact3} alt="" />
-          <img src={funfact4} alt="" />
+          {/* <img src={funfact4} alt="" /> */}
         </div>
       </section>
 
