@@ -73,7 +73,7 @@ body{
 
   font-size:32px;
   font-weight:700;
-
+  text-align:center;
   margin-bottom:22px;
 }
 
@@ -81,23 +81,16 @@ body{
 
 .card input{
   width:100%;
-
   padding:14px;
-
   margin-top:14px;
-
   border-radius:14px;
-
   border:2px solid #7c8cff;
-
   outline:none;
-
   background:
   rgba(255,255,255,0.85);
-
   font-size:15px;
-
   transition:0.2s ease;
+  text-align:left;
 }
 
 .card input:focus{
@@ -108,14 +101,11 @@ body{
 
 .btn{
   width:100%;
-
   padding:14px;
-
   margin-top:25px;
-
   border:none;
   border-radius:30px;
-
+  text-align:center;
   background:
   linear-gradient(
     90deg,

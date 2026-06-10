@@ -66,6 +66,8 @@ function AboutUs() {
 
         <div className="line"></div>
 
+        
+
         <div className="team-container">
 
           <div className="team-card">

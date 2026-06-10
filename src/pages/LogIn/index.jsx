@@ -60,7 +60,7 @@ function Login() {
           onClick={() => onSignIn(email, password, navigate)}
         >
 
-          Login
+          Submit
 
         </button>
 
