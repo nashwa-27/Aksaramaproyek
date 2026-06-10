@@ -4,7 +4,7 @@ import "./index.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-
+import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import zaza from "../../assets/zaza.png";
 import abel from "../../assets/abel.webp";
 import vici from "../../assets/vici.png";
@@ -42,6 +42,16 @@ function AboutUs() {
 
         </div>
 
+        <div className="about-middle">
+
+  {/* <img
+    src={MaskotAksarama}
+    alt=""
+    className="about-maskot"
+  /> */}
+
+</div> 
+
         <div className="about-box bottom-box">
             <h3>🎯 Tujuan Aksarama</h3>
 
@@ -69,7 +79,9 @@ function AboutUs() {
         <div className="line"></div>
 
         
-
+        {/* <div className="divider">
+  ✨ 🌸 ⭐ 🌸 ✨
+</div> */}
         <div className="team-container">
 
           <div className="team-card">

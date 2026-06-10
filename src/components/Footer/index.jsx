@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 
 import Profile from "../../assets/profile.png";
-import AksaramaLogo from "../../assets/Aksarama.webp";
+import AksaramaLogo from "../../assets/AksaramaPutih.png";
 
 import Instagram from "../../assets/instagram.png";
 
@@ -51,7 +51,7 @@ const Footer = () => {
 
           <img
             src={AksaramaLogo}
-            alt="Aksarama"
+            alt="AksaramaPutih"
             className="aksarama-logo"
           />
 
