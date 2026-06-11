@@ -412,6 +412,7 @@ body{
 
    .maskot{
     position:center;
+    text-align:center;
     transform:none;
     width:170px;
     /* margin:10px auto; */
