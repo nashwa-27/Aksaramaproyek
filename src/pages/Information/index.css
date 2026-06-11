@@ -81,7 +81,7 @@ body{
 }
 
 .maskot{
-  width:180px;
+  width:300px;
   display:block;
   margin:auto;
   animation: floatRotate 4s ease-in-out infinite;
