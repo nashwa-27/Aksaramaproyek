@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
+import start from "../../assets/start.png";
 import bginformation from "../../assets/bginformation.webp";
 import MaskotAksarama from "../../assets/MaskotAksarama.png";
 import { getDataTahapan, getGamesByChapterId } from "../../service/tahapan1";

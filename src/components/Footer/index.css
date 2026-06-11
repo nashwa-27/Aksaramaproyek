@@ -1,6 +1,5 @@
 .footer{
   margin-top:60px;
-
   background:
   linear-gradient(
     180deg,
@@ -154,6 +153,7 @@
 
 .footer-right{
   flex:1;
+  color:white;
   margin-left:30px;
   text-align:center;
   min-height:180px;
@@ -161,14 +161,23 @@
 
 .footer-right h3{
   font-size:18px;
-
+  color:white;
   margin-bottom:20px;
 }
 
 .footer-right p{
   font-size:15px;
-
+  COLOR:white;
   margin-bottom:12px;
+}
+
+.copyright{
+  background: transparent;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  /* color: #666; */
+  color: white;
 }
 
 /* ================= MOBILE ================= */
@@ -201,11 +210,13 @@
 
   .footer-menu a{
     font-size:10px;
+    COLOR:white;
   }
 
   .footer-left h3,
   .footer-right h3{
     font-size:11px;
+    COLOR:white;
   }
 
   .footer-left a,

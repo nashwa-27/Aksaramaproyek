@@ -79,14 +79,18 @@ const Footer = () => {
           </p>
 
           <p>
-            kelompok6@gmail.com
+            {/* rihanavicinurrofina@gmail.com */}
+            <a href="mailto:rihanavicinurrofina@gmail.com">rihanavicinurrofina@gmail.com</a>
           </p>
 
         </div>
 
       </div>
+    
 
     </footer>
+    
+    
   );
 };
 

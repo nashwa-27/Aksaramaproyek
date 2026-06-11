@@ -212,6 +212,7 @@ body{
  .funfact-container{
     /* display:flex;
     justify-content:center; */
+    
     width: 85%;
   margin: 30px auto 0;
   display: flex;
@@ -220,15 +221,38 @@ body{
   gap: 25px; 
 }
 .funfact-container img{
-  width:220px;
+  /* width:220px;
   border-radius:18px;
   box-shadow:
   0 4px 10px rgba(0,0,0,0.1);
-  transition:0.2s ease;
+  transition:0.2s ease; */
+  width:220px;
+  border-radius:18px;
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.18);
+
+  transition:0.3s ease;
 }
 
 .funfact-container img:hover{
   transform:translateY(-3px);
+  /* width:220px;
+  border-radius:18px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.15);
+
+  transition:0.3s ease; */
+   width:220px;
+  border-radius:18px;
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.15),
+    0 4px 12px rgba(59,130,246,0.15);
+
+  transition:0.3s ease;
+
 }
 
 /* ================= MOVIE ================= */
