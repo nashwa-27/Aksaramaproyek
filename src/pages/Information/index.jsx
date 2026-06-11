@@ -84,7 +84,9 @@ function Information() {
           data={chapterData}
           onSelectChapter={setSelectedLevel}
           selectedLevel={selectedLevel}
+          
         />
+        
 
         <ChapterButton onClick={handleStart} />
 
