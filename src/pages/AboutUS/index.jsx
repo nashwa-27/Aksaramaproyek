@@ -113,7 +113,7 @@ function AboutUs() {
             </h3>
 
             <p>
-              Sebagai Hipster
+              Sebagai Hustler
             </p>
 
           </div>
@@ -147,7 +147,7 @@ function AboutUs() {
             </h3>
 
             <p>
-              Sebagai Hustler
+              Sebagai Hipster
             </p>
 
           </div>
@@ -164,7 +164,7 @@ function AboutUs() {
             </h3>
 
             <p>
-              Sebagai Hustler
+              Sebagai Hipster
             </p>
 
           </div>
